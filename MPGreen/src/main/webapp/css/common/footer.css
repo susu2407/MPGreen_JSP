@@ -1,27 +1,26 @@
 /* =============== 푸터 CSS =============== */
-
 footer {
     height: 200px;
     flex-shrink: 0;  /* 푸터 크기 고정 */
     background-color: #19202D; 
     color: #a8a9ac;
 }
-footer > div { width:100%; }
 /* terms 부분 */
-footer > div:nth-child(1){ background:#202839;}
+footer > div:nth-child(1){ 
+    background:#202839;
+    box-sizing: border-box;
+}
 /* 맨 아래 info 부분 */
 footer > div:nth-child(2){ 
     height:200px; 
     background:#1a202d;
-    display: flex;
-    align-items: center;
  }
 /* ----- 바 전체 ----- */
 footer .terms {
     width: 1200px;   /* 고정 */
     margin: 0 auto;
     display: flex; /* 메뉴들을 가로로 나열 */
-    justify-content: center; /* 메뉴들을 중앙으로 모음 */
+
 }
 
 /* 각 칸: 정확히 240×50, 포지셔닝 기준 제공 */
@@ -30,8 +29,6 @@ footer .terms li {
   height: 50px;
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 /* ----- util 선 스타일  */
