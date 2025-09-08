@@ -1,5 +1,5 @@
 package greendae.user.dao.about;
 
-public class GreetingDAO {
+public class TestDAO {
 
 }

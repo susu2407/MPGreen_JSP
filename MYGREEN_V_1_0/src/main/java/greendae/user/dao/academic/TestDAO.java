@@ -1,5 +1,5 @@
 package greendae.user.dao.academic;
 
-public class EnrollDAO {
+public class TestDAO {
 
 }
