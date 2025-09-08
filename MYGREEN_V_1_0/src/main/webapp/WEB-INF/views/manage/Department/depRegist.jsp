@@ -1,72 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>그린대학교 대학 및 학과 등록</title>
-    
-    <!-- CSS파일 연결-->
-    <link rel="stylesheet" href="/css/manage/Manage_Header.css">
-    <link rel="stylesheet" href="/css/manage/Manage_Main.css">
-    <link rel="stylesheet" href="/css/manage/Manage_Footer.css">
-    <link rel="stylesheet" href="/css/manage/Manage_학사운영.css">
-    
-    <!-- 헤더 HTML-->
-    <div class="nav">
-        <div class="navItem">
-            <div><a href="/manage/main.html">HOME</a></div>
-            <div><a href="pass">사이트맵</a></div>
-            <div><a href="#">로그아웃</a></div>
-        </div>
-    </div>
-    <div class="header_bar">
-        <article>
-            <a href="#"><img src="/images/admin_logo.png" alt="학사관리 시스템"></a>
-        </article>
-    </div>
-</head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/manage/_header.jsp" %>
+
+
+
 
 
 <body>
     <main>
         <!-- ■■■ 사이드바 시작 ■■■ -->
-        <aside>
-        <div>
-            <h4><img src="/images/ico-admin-setting.png" alt="setting">환경설정</h4>
-            <a href="pass">· 기본환경정보</a><br>
-            <a href="pass">· 약관관리</a>
-        </div>
-        <div>
-            <h4><img src="/images/ico-admin-academic.png" alt="academic">학사운영</h4>
-            <a href="./학사운영/교육운영현황.html">· 교육 운영 현황</a><br>
-            <a href="pass">· 학년별 학생 현황</a><br>
-            <a href="pass">· 학과별 학생 현황</a><br>
-            <a href="./학사운영/강의목록.html">· 강의 목록</a><br>
-            <a href="">· 강의 등록</a><br>
-            <a href="./학사운영/수강현황.html">· 수강 현황</a>
-        </div>
-        <div>
-            <h4><img src="/images/ico-admin-persons.png" alt="persons">인사관리</h4>
-            <a href="">· 학생 목록 및 등록</a><br>
-            <a href="">· 교수 목록 및 등록</a><br>
-            <a href="">· 임직원 목록 및 등록</a>
-        </div>
-        <div>
-            <h4><img src="/images/ico-admin-college.png" alt="college">대학 및 학과</h4>
-            <a href="">· 대학 및 학과 목록</a><br>
-            <a href="">· 대학 및 학과 등록</a>
-        </div>
-        <div>
-            <h4><img src="/images/ico-admin-board.png" alt="board">게시판관리</h4>
-            <a href="pass">· 입학안내 공지사항</a><br>
-            <a href="pass">· 학사안내 공지사항</a><br>
-            <a href="pass">· 커뮤니티 공지사항</a><br>
-            <a href="pass">· 입학상담</a><br>
-            <a href="pass">· 질문 및 답변</a><br>
-            <a href="pass">· 식단안내</a><br>
-            <a href="pass">· 자료실</a>
-        </div>
-        </aside> 
+        <%@ include file="/manage/_sidebar.jsp" %>
         <!-- □□□ 사이드바 끝 □□□ -->
 
         <!-- ■■■ 메인컨텐츠 시작■■■-->
@@ -173,14 +116,4 @@
 
 
     <!-- 푸터 -->
-    <footer>
-        <div class="footer">
-            <span>Copyright ©Green University All rights reserved.ADMINISTRATOR Version 1.4.1</span>
-        </div>
-    </footer>
-</body>
-
-
-
-
-</html>
+    <%@ include file="/manage/_footer.jsp" %>
