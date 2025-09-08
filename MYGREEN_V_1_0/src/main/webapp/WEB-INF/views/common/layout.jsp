@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="/css/common/footer.css">
 </head>
 <body>
-    <!-- ===== 헤더 ===== -->
+
     <header>
         <div>
             <div>
@@ -96,10 +97,10 @@
         </div>
     </header>
 
-      <!-- ===== 메인 ===== -->
+
   <main>
 
-    <!-- ===== 상단바 ===== -->
+
      <div class="top-bar">
         <div class="top-bar-content">
             <img src="/images/ico-home.png" alt="홈">
@@ -111,13 +112,13 @@
     </div>
 
     <section id="container"> 
-        <div class="sidebar"> <!--사이드바-->
-            <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
-                <h2 class="sbTitle">대학소개</h2> <!--사이드바 제목-->
+        <div class="sidebar"> 
+            <div class="sidebarHeader">
+                <h2 class="sbTitle">대학소개</h2> 
             </div>
-            <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
-                <ul class="list"> <!--사이드바 리스트-->
-                    <li class="item"> <!--사이드바 리스트 요소-->
+            <div class="sidebarMenu"> 
+                <ul class="list"> 
+                    <li class="item">
                         <a href="#" class="itemText">총장 인사말</a>
                     </li>
                     <li class="item">
@@ -135,7 +136,7 @@
                 </ul>
             </div>
         </div>
-        <div class="board"> <!--본문 영역-->
+        <div class="board">
             <div class="boardUpper">
                 <h3 class="buText">조직도</h3>
             </div>
@@ -150,7 +151,7 @@
     </section>
 
   </main>
-<!-- ===== 푸터 ===== -->
+
         <footer>
             <div>
             <div class="container bottom">

@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+ <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
         <footer>
             <div>
             <div class="container bottom">
-
+                <p>
                 <ul class="terms">
                     <li><a href="#">개인정보처리방침</a></li>
                     <li><a href="#">통합정보시스템</a></li>
@@ -10,13 +10,13 @@
                     <li><a href="#">주요민원 연럭처</a></li>
                     <li><a href="#">교내공지사항</a></li>
                 </ul>
- 
+                </p>
             </div>
             </div>
             <div>
             <div class="footer-inner">
                 <div class="footer-logo">
-                <img src="../images/footer_logo.png" alt="그린대학교" class="icon">
+                <img src="/MPGreen/images/footer_logo.png" alt="그린대학교" class="icon">
                 </div>
                 <div class="info">
                 <p>
@@ -42,5 +42,6 @@
             </div>
             </div>
         </footer>
-</body>
+    </div>
+    </body>
 </html>

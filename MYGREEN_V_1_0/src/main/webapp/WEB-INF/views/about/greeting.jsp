@@ -1,26 +1,27 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/common/_header.jsp"%>
-    <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/about/_header.jsp"%>
+
+
     <main>
-         <!-- ===== 상단바 ===== -->
+
         <div class="top-bar">
             <div class="top-bar-content">
-                <img src="/images/ico-home.png" alt="홈">
-                <img src="/images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">대학소개</a>
-                <img src="/images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
         
         <section id="container"> 
-        <div class="sidebar"> <!--사이드바-->
-            <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
-                <h2 class="sbTitle">대학소개</h2> <!--사이드바 제목-->
+        <div class="sidebar"> 
+            <div class="sidebarHeader"> 
+                <h2 class="sbTitle">대학소개</h2> 
             </div>
-            <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
-                <ul class="list"> <!--사이드바 리스트-->
-                    <li class="item"> <!--사이드바 리스트 요소-->
+            <div class="sidebarMenu"> 
+                <ul class="list"> 
+                    <li class="item"> 
                         <a href="/about/greeting.html" class="itemText">총장 인사말</a>
                     </li>
                     <li class="item">
@@ -38,11 +39,11 @@
                 </ul>
             </div>
             </div>
-           <div class="board"> <!--본문 영역-->
-            <div class="boardUpper"> <!--사이드바 윗부분(제목 영역)-->
+           <div class="board">
+            <div class="boardUpper">
                 <h3 class="buText">총장 인사말</h3>
             </div>
-                    <div class="boardLower"> <!--본문(내용 영역)-->
+                    <div class="boardLower">
                         <article>
                             <h2>“창의와 도전으로 미래를 여는, 여러분의 든든한 동반자 그린대학교!”</h2>
 
@@ -64,7 +65,7 @@
                             
                             <div class="president-sign">
                                 <span>그린대학교 총장</span>
-                                <img src="../images/signature.png" alt="총장 싸인" class="sign-img">
+                                <img src="/MPGreen/images/signature.png" alt="총장 싸인" class="sign-img">
                             </div>
 
 
@@ -74,4 +75,4 @@
                 </div>
         </section>
     </main>
-<%@ include file="/WEB-INF/views/common/_footer.jsp" %>
+<%@ include file="/WEB-INF/views/about/_footer.jsp" %>
