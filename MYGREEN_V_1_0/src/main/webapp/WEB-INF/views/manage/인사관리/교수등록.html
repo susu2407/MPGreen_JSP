@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그린대학교 교수등록</title>
+    
+    <!-- CSS파일 연결-->
+    <link rel="stylesheet" href="/css/manage/Manage_Header.css">
+    <link rel="stylesheet" href="/css/manage/Manage_Main.css">
+    <link rel="stylesheet" href="/css/manage/Manage_Footer.css">
+    <link rel="stylesheet" href="/css/manage/Manage_학사운영.css">
+    
+    <!-- 헤더 HTML-->
+    <div class="nav">
+        <div class="navItem">
+            <div><a href="/manage/main.html">HOME</a></div>
+            <div><a href="pass">사이트맵</a></div>
+            <div><a href="#">로그아웃</a></div>
+        </div>
+    </div>
+    <div class="header_bar">
+        <article>
+            <a href="#"><img src="/images/admin_logo.png" alt="학사관리 시스템"></a>
+        </article>
+    </div>
+</head>
+
+
+<body>
+    <main>
+        <!-- ■■■ 사이드바 시작 ■■■ -->
+        <aside>
+        <div>
+            <h4><img src="/images/ico-admin-setting.png" alt="setting">환경설정</h4>
+            <a href="pass">· 기본환경정보</a><br>
+            <a href="pass">· 약관관리</a>
+        </div>
+        <div>
+            <h4><img src="/images/ico-admin-academic.png" alt="academic">학사운영</h4>
+            <a href="./학사운영/교육운영현황.html">· 교육 운영 현황</a><br>
+            <a href="pass">· 학년별 학생 현황</a><br>
+            <a href="pass">· 학과별 학생 현황</a><br>
+            <a href="./학사운영/강의목록.html">· 강의 목록</a><br>
+            <a href="">· 강의 등록</a><br>
+            <a href="./학사운영/수강현황.html">· 수강 현황</a>
+        </div>
+        <div>
+            <h4><img src="/images/ico-admin-persons.png" alt="persons">인사관리</h4>
+            <a href="">· 학생 목록 및 등록</a><br>
+            <a href="">· 교수 목록 및 등록</a><br>
+            <a href="">· 임직원 목록 및 등록</a>
+        </div>
+        <div>
+            <h4><img src="/images/ico-admin-college.png" alt="college">대학 및 학과</h4>
+            <a href="">· 대학 및 학과 목록</a><br>
+            <a href="">· 대학 및 학과 등록</a>
+        </div>
+        <div>
+            <h4><img src="/images/ico-admin-board.png" alt="board">게시판관리</h4>
+            <a href="pass">· 입학안내 공지사항</a><br>
+            <a href="pass">· 학사안내 공지사항</a><br>
+            <a href="pass">· 커뮤니티 공지사항</a><br>
+            <a href="pass">· 입학상담</a><br>
+            <a href="pass">· 질문 및 답변</a><br>
+            <a href="pass">· 식단안내</a><br>
+            <a href="pass">· 자료실</a>
+        </div>
+        </aside> 
+        <!-- □□□ 사이드바 끝 □□□ -->
+
+        <!-- ■■■ 메인컨텐츠 시작■■■-->
+        <div class="managemain">
+            <!-- 컨텐츠_최상단 -->
+            <article class="top">
+                <h4>교수 등록</h4>
+                <div class="breadcrumb">
+                    <span>인사관리</span>
+                    <span class="end">교수등록</span>
+                </div>
+            </article>
+
+            <!-- 기본정보 입력 -->
+            <form class="register" >
+                    <div>
+                        <h4><img src="/images/bullet-h4.png" alt="h4">기본정보 입력</h4>
+                    </div>
+
+<!-- 테이블 시작 -->
+                    <table class="basic">
+                        <tr>
+                            <th rowspan="4"><img src="/images/icon-avatar.png" alt=""></th>
+                            <th class="mid">교수번호</th>
+                            <td class="td-bd">
+                                <input type="hidden" name="id" />
+                                <p>연도 + 학과 코드 + 순번 조합 자동생성</p>
+                            </td>
+                            <th>주민등록번호</th>
+                            <td><input type="text" placeholder="- 포함 14자리 입력"></td>
+                        
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td><input type="text" name="name" placeholder="학생 이름 입력"></td>
+                            <th>영문명</th>
+                            <td><input type="text" name="eng_name" placeholder="여권 등과 동일한 영문 이름"></td>
+                        </tr>
+
+                        <tr>
+                            <th>성별</th>
+                            <td>
+                                <div class="radio">
+                                    <label><input type="radio" name="gender" value="남"> 남</label>
+                                    <label><input type="radio" name="gender" value="여"> 여</label>
+                                </div>
+                            </td>
+                            </td>
+                            <th>국적</th>
+                            <td class="td-bd">
+                                <select id="nationality" class="dropdown" name="nationality">
+                                    <option>선택</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>휴대폰</th>
+                            <td class="td-bd"><input type="text" name="phone" placeholder="휴대폰 번호 입력"></td>
+                            <th>이메일</th>
+                            <td class="td-bd"><input type="text" name="email" placeholder="이메일 입력" class="email"></td>
+                        </tr>
+
+                        <tr>
+                            <th></th>
+                            <th>주소</th>
+                            <td colspan="4">
+                                <input class="postNum" type="text" id="postcode" placeholder="우편번호 선택">
+                                <!--<button type="button" onclick="searchPostcode()">주소검색</button> <br>-->
+                                <input type="text" id="address" placeholder="기본주소 선택" name="addr1" class="addr"> <br>
+                                <input type="text" id="detailAddress" placeholder="상세주소 입력" name="addr2" class="addr"> <br>
+                            </td>
+                        </tr>
+                    </table>
+
+<!-- 학적정보 입력 -->
+                    <div>
+                        <h4><img src="/images/bullet-h4.png" alt="h4">학적정보 입력</h4>
+                    </div>
+
+                    <table class="basic">
+                        <tr>
+                            <th>졸업대학</th>
+                                <td><input type="text" name="gradColName" placeholder="대학교 이름 입력"></td>
+                            <th>학문 분야(전공)</th>
+                                <td><input type="text" name="major" placeholder="전공입력"></td>
+                        </tr>
+
+                        <tr>
+                            <th>졸업일</th>
+                                <td><input type="date" name="end_date"></td>
+                            <th>학위</th>
+                                <td>
+                                    <select name="degree">
+                                        <option>박사</option>
+                                        <option>석사</option>
+                                        <option>학사</option>
+                                    </select>
+                                </td>
+                        </tr>
+
+                        <tr>
+                            <th>담당학과</th>
+                                <td>
+                                    <select class="dropdown" name="college_name" id="collegeSelect">
+                                        <option>인문사회대학</option>
+                                    </select>
+                                    <select class="dropdown" name="departmentName" id="departmentSelect">
+                                        <option value="">영어영문학과</option>
+                                    </select>
+                                </td>
+
+                            <th>임용일</th>
+                                <td><input type="date" name="appointmentDate"></td>
+                        </tr>
+                    </table>
+
+                <input type="submit" value="등록" class="button">
+            </form>
+
+
+        </div>
+        <!-- □□□ 메인컨텐츠 끝  □□□-->
+        
+        
+    </main>
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer">
+            <span>Copyright ©Green University All rights reserved.ADMINISTRATOR Version 1.4.1</span>
+        </div>
+    </footer>
+</body>
+
+
+
+
+</html>
