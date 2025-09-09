@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
-    <!-- ===== 메인 ===== -->
+
 <main>
-<!-- ===== 상단바 ===== -->
+
 <div class="top-bar">
     <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -14,7 +14,7 @@
 </div>
 
 <section id="container">
-  <!-- 좌측 사이드바 -->
+
   <div class="sidebar">
     <div class="sidebarHeader">
       <h2 class="sbTitle">학사안내</h2>
@@ -30,7 +30,7 @@
       </ul>
     </div>
   </div>
-<div class="board"> <!--본문 영역-->
+<div class="board"> 
   <div class="boardUpper">
     <h3 class="buText">수강신청</h3>
   </div>
@@ -43,12 +43,10 @@
       <li>자세한 설명은 학사일정 공지사항 게시판 참조</li>
     </ul>
 
-    <!-- ▌ 수강신청 학점 -->
+
     <h4 style="margin:22px 0 8px">▌ 수강신청 학점</h4>
     <p>학기당 이수학점 : 18학점 이내 (논문과목 별도) [대학 학칙 제20조]</p>
 
-    <!-- ▌ 학부(과)별 신청 학점 -->
-    <!-- ▌ 학부(과)별 신청 학점 -->
     <h4 style="margin:22px 0 10px">▌ 학부(과)별 신청 학점</h4>
     <table class="enroll-table" 
           style="width:100%; border-collapse:collapse; background:#fff; font-size:14px">
@@ -97,7 +95,7 @@
       <li>장학생 선발은 직전학기 평점평균 2.0 이상을 취득하여야 하며, 대학별 기준학점 이상을 이수하여야 합니다. (학생지원팀 문의)</li>
     </ul>
 
-    <!-- ▌ 변경/철회 -->
+
     <h4 style="margin:22px 0 8px">▌ 수강신청 변경 및 수강과목 철회</h4>
     <ul style="margin-left:18px; list-style:disc">
       <li>수강 신청과목은 정해진 기간 내 철회 가능하며, 철회 과목은 학점에 포함되지 않습니다.</li>
@@ -105,7 +103,7 @@
       <li>철회 및 변경은 반드시 학사일정에 명시된 기간 내 진행해야 합니다.</li>
     </ul>
 
-    <button class="btn-enroll" style="margin-top:16px; padding:10px 20px; background:#3F97F6; color:#fff; border:0; font-weight:700; cursor:pointer">
+    <button class="btn-enroll" style="margin-top:16px; padding:10px 20px; background:#3F97F6; color:#fff; border:0; border-radius:6px; font-weight:700; cursor:pointer">
       수강신청하기
     </button>
   </div>
