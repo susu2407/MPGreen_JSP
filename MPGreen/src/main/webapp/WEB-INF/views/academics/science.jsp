@@ -21,23 +21,23 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/academics/humanities.html" class="itemText">인문사회대학</a>
+                        <a href="./humanities.html" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/science.html" class="itemText">자연과학대학</a>
+                        <a href="./science.html" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/engineering.html" class="itemText">공과대학</a>
+                        <a href="./engineering.html" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/education.html" class="itemText">사범대학</a>
+                        <a href="./education.html" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/graduate.html" class="itemText">대학원</a>
+                        <a href="./graduate.html" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>>
 
         <div class="board"> <!--본문 영역-->
             
