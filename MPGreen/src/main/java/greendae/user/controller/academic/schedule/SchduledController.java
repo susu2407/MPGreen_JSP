@@ -1,4 +1,4 @@
-package greendae.user.controller.member.signup;
+package greendae.user.controller.academic.schedule;
 
 import java.io.IOException;
 
@@ -9,21 +9,21 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/member/signup.do")
-public class ListController extends HttpServlet{
+@WebServlet("academic/schedule.do")
+public class SchduledController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/member/signup.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/academic/schedule.jsp");
 		dispatcher.forward(req, resp);
-		
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		super.doPost(req, resp);
 	}
+
 }

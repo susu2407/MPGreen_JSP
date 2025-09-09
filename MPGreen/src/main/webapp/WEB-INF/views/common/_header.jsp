@@ -5,15 +5,9 @@
         <meta charset="UTF-8">
         <title>GreenUniversity</title>
         <link rel="stylesheet" href="/MPGreen/css/common/header.css">
-<<<<<<< HEAD
-        <link rel="stylesheet" href="/MPGreen/css/index.css">
+		<link rel="stylesheet" href="/MPGreen/css/index.css">
 		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
 		<link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-=======
-        <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/about/About.css">
-		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
->>>>>>> main
     </head>
 
     <body>

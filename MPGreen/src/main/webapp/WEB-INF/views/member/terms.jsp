@@ -1,171 +1,177 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>약관 안내</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 40px 0; /* 위아래 여백 추가 */
-            background-color: #f4f4f4;
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #333;
-        }
-
-        /* 전체 레이아웃 (width: 990px) */
-        .terms-container {
-            width: 990px;
-            background-color: #fff;
-            padding: 30px;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
-
-        /* 상단 안내 문구 */
-        .terms-header {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .terms-header p {
-            margin: 0;
-        }
-        .terms-header .highlight {
-            color: #3F97F6;
-        }
-
-        /* 약관 내용 테이블 */
-        .terms-table {
-            width: 100%;
-            border-top: 2px solid #071F4B;
-            border-collapse: collapse;
-            
-        }
-
-        .terms-table th, .terms-table td {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 20px;
-            vertical-align: top;
-        }
-        
-        .terms-table th {
-            width: 180px;
-            background-color: rgba(244, 248, 252, 1);
-            font-weight: 500;
-            text-align: center;
-            vertical-align: middle;
-            border-right: 1px solid #e0e0e0;
-        }
-        
-        .terms-table td {
-            padding: 15px 20px;
-        }
-
-        .print-link {
-            text-align: right;
-            margin-bottom: 10px;
-        }
-
-        .print-link a {
-            font-size: 13px;
-            color: #555;
-            text-decoration: none;
-        }
-
-        .terms-content-box {
-            height: 226px;
-            border: 1px solid #ccc;
-            overflow-y: auto;
-            padding: 15px;
-            font-size: 13px;
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* 전체 동의 체크박스 영역 */
-        .agreement-section {
-            margin-top: 20px;
-            text-align: left;
-            font-size: 14px;
-        }
-        /* 체크박스와 텍스트 세로 정렬 맞추기 */
-        .agreement-section input {
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-        .agreement-section label {
-             vertical-align: middle;
-        }
-
-        /* 하단 버튼 영역 */
-        .button-section {
-            margin-top: 30px;
-            display: flex;
-            justify-content: flex-end;
-            gap: 8px;
-        }
-
-        .btn {
-            width: 56px;
-            height: 48px;
-            border: none;
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .btn-cancel {
-            background-color: #8B8B8B;
-        }
-
-        .btn-next {
-            background-color: #3F97F6;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/css/common/header.css">
+    <link rel="stylesheet" href="/css/common/layout.css">
+    <link rel="stylesheet" href="/css/member/trems.css">
+    <link rel="stylesheet" href="/css/common/footer.css">
 </head>
 <body>
-    <div class="terms-container">
-        <header class="terms-header">
-            <p><span class="highlight">※</span> 대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다</p>
-            <p>※ 만 14세 미만 아동의 경우 홈페이지 회원가입에 제한이 있습니다.</p>
-        </header>
-
-        <main>
-            <table class="terms-table">
-                <tbody>
-                    <tr>
-                        <th>이용약관</th>
-                        <td>
-                            <div class="terms-content-box">약관내용 출력하기</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>개인정보 수집안내</th>
-                        <td>
-                            <div class="terms-content-box">약관내용 출력하기</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="agreement-section">
-                <label>
-                    <input type="checkbox" name="agree-all">
-                    <span>위의 홈페이지 이용에 따른 회원가입 약관 및 개인정보 수집ㆍ이용에 모두 동의합니다.</span>
-                </label>
+    <header>
+        <!-- 1. 상단 유틸 메뉴: 이 div가 화면 끝까지 늘어남 -->
+        <div id="header-top">
+            <!-- .container가 내부 콘텐츠를 1200px로 중앙 정렬함 -->
+            <div class="container">
+                <ul class="util">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">학생지원</a></li>
+                </ul>
             </div>
-            
-            <div class="button-section">
-                <button type="button" class="btn btn-cancel">취소</button>
-                <button type="button" class="btn btn-next">다음</button>
+        </div>
+        <!-- 2. 메인 네비게이션: 이 div도 화면 끝까지 늘어남 -->
+        <div class="header-main">
+            <!-- .container가 로고와 메뉴를 1200px 중앙에 배치 -->
+            <div class="container">
+                <a href="/" class="logo">
+                    <img src="/images/header_logo.png" alt="그린대학교">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="dropdown"><a class="dropbtn" href="#">대학소개</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">총장 인사말</a></li>
+                                <li><a href="#">교육이념</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropbtn" href="#">입학안내</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">수시모집</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropbtn" href="#">대학·대학원</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">인문사회대학</a></li>
+                                <li><a href="#">자연과학대학</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropbtn" href="#">학사안내</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">학사일정</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropbtn" href="#">대학생활</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">학생회 소개</a></li>
+                                <li><a href="#">동아리/스터디</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropbtn" href="#">커뮤니티</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">뉴스 및 칼럼</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </main>
-    </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== 상단바 ===== -->
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <img src="../images/ico-home.png" alt="홈">
+                <img src="../images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">대학소개</a>
+                <img src="../images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">총장 인사말</a>
+            </div>
+        </div>
+
+        <div class="terms-container">
+            <div class="terms-header">
+                <h3>약관 안내</h3>
+                <p>※대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다</p>
+                <p>※ 만 14세 미만 아동의 경우 홈페이지 회원가입에 제한이 있습니다.</p>
+            </div>
+
+            <div class="terms-area">
+                <table class="terms-table">
+                    <tbody>
+                        <tr>
+                            <th>이용약관</th>
+                            <td>
+                                <div class="terms-content-box">약관내용 출력하기</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>개인정보 수집안내</th>
+                            <td>
+                                <div class="terms-content-box">약관내용 출력하기</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="agreement-section">
+                    <label>
+                        <input type="checkbox" name="agree-all">
+                        <span>위의 홈페이지 이용에 따른 회원가입 약관 및 개인정보 수집ㆍ이용에 모두 동의합니다.</span>
+                    </label>
+                </div>
+                
+                <div class="button-section">
+                    <button type="button" class="btn btn-cancel">취소</button>
+                    <button type="button" class="btn btn-next">다음</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+        <div class="container bottom">
+            <p>
+            <ul class="terms">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">통합정보시스템</a></li>
+                <li><a href="#">학사일정</a></li>
+                <li><a href="#">주요민원 연럭처</a></li>
+                <li><a href="#">교내공지사항</a></li>
+            </ul>
+            </p>
+        </div>
+        </div>
+        <div>
+        <div class="footer-inner">
+            <div class="footer-logo">
+            <img src="/images/footer_logo.png" alt="그린대학교" class="icon">
+            </div>
+            <div class="info">
+            <p>
+                그린대학교<br>
+                [12345] 부산광역시 부산진구 부전대로 123 그린대학교<br>
+                대표전화 : 051-123-1000 / 입학안내 : 051-123-1302 / FAX : 051-123-3333<br><br>
+                CopyrightⓒGreen University All rights reserved.
+            </p>
+            </div>
+            <div class="footer-tools">
+            <form action="#" method="get">
+                <select name="site" class="site-select" aria-label="주요사이트">
+                <option selected>주요사이트</option>
+                <option value="introduce">대학소개</option>
+                <option value="admission">입학안내</option>
+                <option value="graduate">대학.대학원</option>
+                <option value="Academic">학사안내</option>
+                <option value="campuslife">대학생활</option>
+                <option value="community">커뮤니티</option>
+                </select>
+            </form>
+            </div>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
