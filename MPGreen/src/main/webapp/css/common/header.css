@@ -1,15 +1,14 @@
-
 /* ========== 헤더 CSS ========== */
 /* --- 상단 파란색 유틸 메뉴 영역 --- */
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
 header {
     margin: 0 auto;
     width: 100%;
-    height: 104px; /* 높이 104px로 수정 */
+    height: 100%;
     border-bottom: 1px solid #eee;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
 }
 #header-top { /* 이 div가 화면 끝까지 꽉 찰 배경색을 가짐 */
     background-color: #3F97F6;

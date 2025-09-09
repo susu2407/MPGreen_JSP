@@ -1,3 +1,12 @@
+/* ---------- 기본 설정 (Reset CSS) --------- */
+ /* 이 파일은 모든 페이지에서 가장 먼저 불러와야 합니다. */
+
+ /* 모든 요소의 여백과 테두리 계산 방식을 통일합니다. */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
 /* =============== 메인 CSS 파일 =============== */
 main {
     background-color: #f3f5f9;
@@ -6,7 +15,7 @@ main {
 .hero-section {
     width: 100%;
     height: 560px;
-    background-image: url(/images/bg-main-vi01.jpg); /* 이미지 자리 표시 */
+    background-image: url('/MPGreen/images/bg-main-vi01.jpg'); /* 이미지 자리 표시 */
     background-position: center;
     background-size: cover;
     display: flex;
@@ -139,10 +148,10 @@ main {
 
 /* 5. more-btn 개별 스타일 (이미지) */
 .notice-header .more-btn { /*학사안내, 뉴스/이벤트 쪽*/
-    background-image: url('/images/bg-viewmore01.png');
+    background-image: url('/MPGreen/images/images/bg-viewmore01.png');
 }
 .notice-board.blue-header .more-btn {/*공지사항 쪽*/
-    background-image: url('/images/bg-viewmore02.png'); 
+    background-image: url('/MPGreen/images/images/bg-viewmore02.png'); 
 }
 
 /* 파란색 공지사항 보드 스타일 */
@@ -214,7 +223,7 @@ main {
     display: block;
     width: 17px;
     height: 17px;
-    background-image: url('/images/bg-viewmore01.png');
+    background-image: url('/MPGreen/images/bg-viewmore01.png');
 }
 
 /* 4개의 갤러리 아이템을 감싸는 부모 */
@@ -236,10 +245,10 @@ main {
 }
 
 /* 각 아이템에 이미지 입히기*/
-.photo_gallery > a:nth-of-type(1) { background-image: url('/images/gallary_sample1.jpg'); }
-.photo_gallery > a:nth-of-type(2) { background-image: url('/images/gallary_sample2.jpg'); }
-.photo_gallery > a:nth-of-type(3) { background-image: url('/images/gallary_sample3.jpg'); }
-.photo_gallery > a:nth-of-type(4) { background-image: url('/images/gallary_sample4.png'); }
+.photo_gallery > a:nth-of-type(1) { background-image: url('/MPGreen/images/gallary_sample1.jpg'); }
+.photo_gallery > a:nth-of-type(2) { background-image: url('/MPGreen/images/gallary_sample2.jpg'); }
+.photo_gallery > a:nth-of-type(3) { background-image: url('/MPGreen/images/gallary_sample3.jpg'); }
+.photo_gallery > a:nth-of-type(4) { background-image: url('/MPGreen/images/gallary_sample4.png'); }
 
 
 /* 이미지 위에 올라가는 반투명 캡션 박스 스타일 */
@@ -273,7 +282,7 @@ main {
 
 /* --- 4. 동아리 바로가기 배너 ----------------------------------- */
 .sites-banner-section {
-    background-image: url(/images/bg-main-banner.gif);
+    background-image: url('/MPGreen/images/bg-main-banner.gif');
     padding: 40px 0;
     color: white;
 }
@@ -312,7 +321,7 @@ main {
 
 /* --- 5. 하단 콘텐츠 섹션 (뉴스/이벤트, SMART LINK) ----------------------------------- */
 .bottom-content-section {
-    padding: 60px 0;
+    padding: 30px 0;
 }
 .bottom-content-section .container {
     display: flex;
@@ -371,24 +380,24 @@ main {
 }
 /* --- 5. 개별 아이콘 (이미지 겹치기) --- */
 .link-item.cert .icon-placeholder {
-    background-image: url('/images/bg-main-link01.png');
+    background-image: url('/MPGreen/images/bg-main-link01.png');
     /* ★★★ 원리 2: 아이콘 이미지 크기를 동그라미보다 작게 설정 ★★★ */
     background-size: 50%; /* 아이콘 크기를 동그라미의 50%로 설정 (숫자 조절 가능) */
 }
 .link-item.schedule .icon-placeholder {
-    background-image: url('/images/bg-main-link02.png');
+    background-image: url('/MPGreen/images/bg-main-link02.png');
     background-size: 50%;
 }
 .link-item.directions .icon-placeholder {
-    background-image: url('/images/bg-main-link03.png');
+    background-image: url('/MPGreen/images/bg-main-link03.png');
     background-size: 50%;
 }
 .link-item.sitemap .icon-placeholder {
-    background-image: url('/images/bg-main-link04.png');
+    background-image: url('/MPGreen/images/bg-main-link04.png');
     background-size: 50%;
 }
 .link-item.support .icon-placeholder {
-    background-image: url('/images/bg-main-link05.png');
+    background-image: url('/MPGreen/images/bg-main-link05.png');
     background-size: 50%;
 }
 
