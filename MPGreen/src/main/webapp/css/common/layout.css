@@ -13,7 +13,8 @@ ul,ol{
 
 /* a태그 스타일 */
 a{
-    text-decoration: none; color: black;
+    text-decoration: none;
+    color: inherit; /* 부모 요소의 글자색을 따르도록 수정 */
 }
 
 /* container 레이아웃 */
