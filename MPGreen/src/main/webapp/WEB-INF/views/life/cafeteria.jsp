@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
-<body class="page-life">
-
+  <!-- ===== 메인 ===== -->
   <main>
-
+    <!-- 상단 경로 -->
     <div class="top-bar">
       <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -15,35 +14,36 @@
     </div>
 
     <section id="container">
+      <!-- 좌측 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">대학생활</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/clubs.do ">학생회 소개</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/study.do" >동아리/스터디</a></li>
-            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/life/cafeteria.do" style="color:#fff">식단안내</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/gallery.do">갤러리</a></li>
+            <li class="item"><a class="itemText" href="./clubs.html">학생회 소개</a></li>
+            <li class="item"><a class="itemText" href="./study.html">동아리/스터디</a></li>
+            <li class="item active"><a class="itemText" href="./cafeteria.html" style="color:#fff">식단안내</a></li>
+            <li class="item"><a class="itemText" href="./gallery.html">갤러리</a></li>
           </ul>
         </div>
       </div>
 
-
+      <!-- 본문 -->
       <div class="board">
         <div class="boardUpper">
           <h3 class="buText">식단안내</h3>
         </div>
 
         <div class="life-wrap life-meal">
-
+          <!-- 주간 범위/네비 -->
           <div class="meal-header">
             <button type="button" class="meal-nav prev" aria-label="이전 주">&#8249;</button>
             <div class="meal-range">2025.03.10 ~ 2025.03.14</div>
             <button type="button" class="meal-nav next" aria-label="다음 주">&#8250;</button>
           </div>
 
-
+          <!-- 식단 테이블 -->
           <table class="meal-table">
             <colgroup>
               <col style="width:120px">
@@ -66,7 +66,7 @@
               </tr>
             </thead>
             <tbody>
-
+              <!-- 조식 -->
               <tr>
                 <th class="meal-type">조식</th>
                 <td class="center mute">미운영</td>
@@ -77,7 +77,7 @@
                 <td class="center mute">미운영</td>
               </tr>
 
-
+              <!-- 중식 -->
               <tr>
                 <th class="meal-type">중식</th>
                 <td class="menu">
@@ -143,7 +143,7 @@
                 <td class="menu center mute">미운영</td>
               </tr>
 
-
+              <!-- 석식 -->
               <tr>
                 <th class="meal-type">석식</th>
                 <td class="center mute">미운영</td>
@@ -162,4 +162,3 @@
     </section>
   </main>
 <%@ include file="./_footer.jsp" %>
-</body>

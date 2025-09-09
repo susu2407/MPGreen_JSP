@@ -1,27 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>수강신청내역</title>
-    <link rel="stylesheet" href="../css/student/Student.css">
-    <link rel="stylesheet" href="../css/common/header.css">
-    <link rel="stylesheet" href="../css/common/layout.css">
-    <link rel="stylesheet" href="../css/common/footer.css">
-</head>
-<body>
-      <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/student/_header.jsp"%>
+
   <main>
 
-    <!-- ===== 상단바 ===== -->
      <div class="top-bar">
         <div class="top-bar-content">
-            <img src="../images/ico-home.png" alt="홈">
-            <img src="../images/bg-path-arrow.png" alt="next">
+            <img src="/MPGreen/images/ico-home.png" alt="홈">
+            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">학생지원</a>
-            <img src="../images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">성적조회</a>
+            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <a href="/student/curriculum.html" class="sidebar-text">성적조회</a>
         </div>
     </div>
 
@@ -33,23 +21,24 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">수강신청</a>
+                        <a href="/student/enroll.html" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">수강신청내역</a>
+                        <a href="/student/enroll-list.html" class="itemText">수강신청내역</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">교과과정</a>
+                        <a href="/student/curriculum.html" class="itemText">교과과정</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">성적조회</a>
+                        <a href="/student/grade-view.html" class="itemText">성적조회</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">학적</a>
+                        <a href="/student/record.html" class="itemText">학적</a>
                     </li>
                 </ul>
             </div>
         </div>
+        
         <div class="board"> <!--본문 영역-->
             <div class="boardUpper">
                 <h3 class="buText">성적조회</h3>
@@ -179,5 +168,4 @@
 
   </main>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/views/student/_footer.jsp" %>
