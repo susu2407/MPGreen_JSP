@@ -6,8 +6,8 @@
         <title>GreenUniversity</title>
         <link rel="stylesheet" href="/MPGreen/css/common/header.css">
         <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/about/About.css">
-		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
+        <link rel="stylesheet" href="/MPGreen/css/academic/Academic.css">
+        <link rel="stylesheet" href="/MPGreen/css/common/layout.css">
     </head>
 
     <body>
@@ -23,7 +23,6 @@
                 </div>
             </div>
             <div class="header-main">
-                <!-- .container가 로고와 메뉴를 1200px 중앙에 배치 -->
                 <div class="container">
                     <a href="/" class="logo">
                         <img src="/MPGreen/images/header_logo.png" alt="그린대학교">

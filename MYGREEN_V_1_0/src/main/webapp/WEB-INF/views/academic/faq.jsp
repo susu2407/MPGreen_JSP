@@ -1,27 +1,19 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학사안내(자주 묻는 질문)</title>
-    <link rel="stylesheet" href="/css/academic/Academic.css">
-    <link rel="stylesheet" href="/css/common/layout.css">
-</head>
-<body>
-   
-    <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/academic/_header.jsp"%>
+
+
     <main>
-         <!-- ===== 상단바 ===== -->
+
         <div class="top-bar">
             <div class="top-bar-content">
-                <img src="/images/ico-home.png" alt="홈">
-                <img src="/images/bg-path-arrow.png" alt="next">
-                <a href="#" class="sidebar-text">학사안내</a>
-                <img src="/images/bg-path-arrow.png" alt="next">
-                <a href="#" class="sidebar-text">자주 묻는 질문</a>
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">대학소개</a>
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
+        
     <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
@@ -30,22 +22,22 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">공지사항</a>
+                        <a href="/MPGreen/academic/notice.do" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">학사일정</a>
+                        <a href="/MPGreen/academic/schedule.do" class="itemText">학사일정</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">수강신청</a>
+                        <a href="/MPGreen/academic/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">성적</a>
+                        <a href="/MPGreen/academic/grade.do" class="itemText">성적</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">수료 및 졸업</a>
+                        <a href="/MPGreen/academic/graduation.do" class="itemText">수료 및 졸업</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">자주 묻는 질문</a>
+                        <a href="/MPGreen/academic/faq.do" class="itemText">자주 묻는 질문</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +51,7 @@
                 <div class="boardLower"> <!--본문(내용 영역)-->
                     <!--------- 1번째 FAQ ---------->
                     <div class="text-with-icon">
-                        <img src="/images/bullet-h4.png" alt="icon" class="icon">
+                        <img src="/MPGreen/images/bullet-h4.png" alt="icon" class="icon">
                         <span>휴·복학 관련</span>
                     </div>
 
@@ -109,7 +101,7 @@
                     
                     <!--------- 2번째 FAQ ---------->
                     <div class="text-with-icon">
-                        <img src="/images/bullet-h4.png" alt="icon" class="icon">
+                        <img src="/MPGreen/images/bullet-h4.png" alt="icon" class="icon">
                         <span>교과 및 학사 관련</span>
                     </div>
                     
@@ -150,7 +142,7 @@
 
                     <!--------- 3번째 FAQ ---------->
                        <div class="text-with-icon">
-                        <img src="/images/bullet-h4.png" alt="icon" class="icon">
+                        <img src="/MPGreen/images/bullet-h4.png" alt="icon" class="icon">
                         <span>수강신청 관련</span>
                     </div>
                     
@@ -202,6 +194,4 @@
         </div>
     </section>
   </main>
-
-</body>
-</html>
+<%@ include file="/WEB-INF/views/academic/_footer.jsp" %>

@@ -1,28 +1,19 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대학소개(교육이념)</title>
-    <link rel="stylesheet" href="/css/about/About.css">
-    <link rel="stylesheet" href="/css/common/layout.css">
-</head>
-<body>
+<%@ include file="/WEB-INF/views/about/_header.jsp"%>
 
 
-    <!-- ===== 메인 ===== -->
     <main>
-         <!-- ===== 상단바 ===== -->
+
         <div class="top-bar">
             <div class="top-bar-content">
-                <img src="/images/ico-home.png" alt="홈">
-                <img src="/images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">대학소개</a>
-                <img src="/images/bg-path-arrow.png" alt="next">
-                <a href="#" class="sidebar-text">교육이념</a>
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
+        
         <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
@@ -30,20 +21,20 @@
             </div>
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
-                    <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="./greeting.html" class="itemText">총장 인사말</a>
+                    <li class="item"> 
+                        <a href="/MPGreen/about/greeting.do" class="itemText">총장 인사말</a>
                     </li>
                     <li class="item">
-                        <a href="./philosophy.html" class="itemText">교육이념</a>
+                        <a href="/MPGreen/about/philosophy.do" class="itemText">교육이념</a>
                     </li>
                     <li class="item">
-                        <a href="./history.html" class="itemText">연혁</a>
+                        <a href="/MPGreen/about/history.do" class="itemText">연혁</a>
                     </li>
                     <li class="item">
-                        <a href="./organization.html" class="itemText">조직도</a>
+                        <a href="/MPGreen/about/organization.do" class="itemText">조직도</a>
                     </li>
                     <li class="item">
-                        <a href="./location.html" class="itemText">오시는 길</a>
+                        <a href="/MPGreen/about/location.do" class="itemText">오시는 길</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +47,7 @@
                             
                     <article class="philosophy">
                         <h2 class="philosophy-title">교육이념</h2>
-                        <img src="/images/philosophy.png" alt="조직도" class="phy-image">
+                        <img src="/MPGreen/images/philosophy.png" alt="조직도" class="phy-image">
 
                         <p class="philosophy-intro">
                             그린대학교는 <strong>창의·도전·나눔</strong>의 건학이념을 바탕으로
@@ -90,6 +81,4 @@
 
         </section>
     </main>
-
-</body>
-</html>
+<%@ include file="/WEB-INF/views/about/_footer.jsp" %>
