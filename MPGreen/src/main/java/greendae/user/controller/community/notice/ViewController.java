@@ -1,4 +1,4 @@
-package greendae.user.controller.community.view;
+package greendae.user.controller.community.notice;
 
 import java.io.IOException;
 
@@ -9,15 +9,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/community/view.do")
-public class WriteController extends HttpServlet{
+@WebServlet("/community/notice_view.do")
+public class ViewController extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/view.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/notice_view.jsp");
 		dispatcher.forward(req, resp);
 		
 	}
