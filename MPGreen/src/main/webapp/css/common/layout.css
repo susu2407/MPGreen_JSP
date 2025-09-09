@@ -28,11 +28,11 @@ padding : 0;
         display: flex;
         gap: 60px; /* 사이드바와 보드 사이 여백 */
     }
-
     .sidebar {
         width: 210px;
         flex-shrink: 0; /* 줄어들지 않게 */
     }
+
 
     .board {
     width: 930px;          /* 전체 영역 */
