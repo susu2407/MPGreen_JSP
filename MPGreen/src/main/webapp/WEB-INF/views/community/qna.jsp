@@ -152,7 +152,6 @@
 	              <a href="${pageContext.request.contextPath}/community/qna_write.do" class="btn-write">글쓰기</a>
 	          </div>
 	        </div>
-	      </div>
 	    </section>
   </main>
   <%@ include file="./_footer.jsp" %>

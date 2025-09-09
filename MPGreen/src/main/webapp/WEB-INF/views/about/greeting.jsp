@@ -22,19 +22,19 @@
             <div class="sidebarMenu"> 
                 <ul class="list"> 
                     <li class="item"> 
-                        <a href="/about/greeting.html" class="itemText">총장 인사말</a>
+                        <a href="/MPGreen/about/greeting.do" class="itemText">총장 인사말</a>
                     </li>
                     <li class="item">
-                        <a href="/about/philosophy.html" class="itemText">교육이념</a>
+                        <a href="/MPGreen/about/philosophy.do" class="itemText">교육이념</a>
                     </li>
                     <li class="item">
-                        <a href="/about//history.html" class="itemText">연혁</a>
+                        <a href="/MPGreen/about/history.do" class="itemText">연혁</a>
                     </li>
                     <li class="item">
-                        <a href="/about//organization.html" class="itemText">조직도</a>
+                        <a href="/MPGreen/about/organization.do" class="itemText">조직도</a>
                     </li>
                     <li class="item">
-                        <a href="/about//location.html" class="itemText">오시는 길</a>
+                        <a href="/MPGreen/about/location.do" class="itemText">오시는 길</a>
                     </li>
                 </ul>
             </div>

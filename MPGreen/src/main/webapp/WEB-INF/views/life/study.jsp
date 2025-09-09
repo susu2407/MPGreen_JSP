@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>  
-<body class="page-life">
-
+  <!-- ===== 메인 ===== -->
   <main>
-
+    <!-- 상단 경로 -->
     <div class="top-bar">
       <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -15,36 +14,36 @@
     </div>
 
     <section id="container">
-
+      <!-- 좌측 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">대학생활</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/clubs.do ">학생회 소개</a></li>
-            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/life/study.do" style="color:#fff">동아리/스터디</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/cafeteria.do">식단안내</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/gallery.do">갤러리</a></li>
+            <li class="item"><a class="itemText" href="./clubs.html">학생회 소개</a></li>
+            <li class="item active"><a class="itemText" href="./study.html" style="color:#fff">동아리/스터디</a></li>
+            <li class="item"><a class="itemText" href="./cafeteria.html">식단안내</a></li>
+            <li class="item"><a class="itemText" href="./gallery.html">갤러리</a></li>
           </ul>
         </div>
       </div>
 
-
+      <!-- 본문 -->
       <div class="board">
         <div class="boardUpper">
           <h3 class="buText">동아리/스터디</h3>
         </div>
 
         <div class="life-wrap">
-
+          <!-- 간단 안내 -->
           <div class="life-brief">
             그린대학교 동아리/스터디는 관심 분야의 지식을 나누고 교류하며 성장하는
             학생 주도 커뮤니티입니다. 정규(중앙) 동아리와 자율 스터디, 두 트랙으로 운영되며
             모든 재학생이 자유롭게 참여할 수 있습니다.
           </div>
 
-
+          <!-- 모집 중 카드 -->
           <h4 class="life-sec-title">🎯 현재 모집 중</h4>
           <div class="life-cards life-cards--grid">
             <div class="life-card">
@@ -85,6 +84,7 @@
             </div>
           </div>
 
+          <!-- 분야별 리스트 -->
           <h4 class="life-sec-title">📚 분야별 동아리</h4>
           <table class="life-table">
             <colgroup>
@@ -126,7 +126,7 @@
             </tbody>
           </table>
 
-
+          <!-- 가입 절차 -->
           <h4 class="life-sec-title">📝 가입 절차</h4>
           <div class="life-steps">
             <div class="life-step"><b>1. 둘러보기</b><br>모집 중 카드/분야별 리스트 확인</div>
@@ -135,12 +135,12 @@
             <div class="life-step"><b>4. 등록</b><br>가입 신청서 제출 및 회비 납부(해당 시)</div>
           </div>
 
-
+          <!-- 문의 박스 -->
           <div class="life-note">
             📮 문의: 학생회관 2층 동아리연합회(051-123-4568) · club@green.ac.kr
           </div>
 
-
+          <!-- FAQ -->
           <h4 class="life-sec-title">❓ 자주 묻는 질문</h4>
           <div class="life-faq">
             <details>
@@ -161,4 +161,3 @@
     </section>
   </main>
   <%@ include file="./_footer.jsp" %>
-  </body>

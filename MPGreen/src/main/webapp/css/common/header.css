@@ -13,7 +13,7 @@ header {
 }
 #header-top { /* 이 div가 화면 끝까지 꽉 찰 배경색을 가짐 */
     background-color: #3F97F6;
-    color: white;
+    color: #f0f0f0;
 }
 #header-top .container {
     height: 30px; /* 상단 유틸 높이 */

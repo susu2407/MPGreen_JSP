@@ -1,27 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>대학원</title>
-    <link rel="stylesheet" href="../css/common/layout.css">
-    <link rel="stylesheet" href="../css/academics/academics.css">
-    <link rel="stylesheet" href="../css/common/header.css">
-    <link rel="stylesheet" href="../css/common/footer.css">
-</head>
-<body>
-           <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/academics/_header.jsp" %>
+
   <main>
 
-    <!-- ===== 상단바 ===== -->
-     <div class="top-bar"> 
+<div class="top-bar">
         <div class="top-bar-content">
-            <img src="../images/ico-home.png" alt="홈">
-            <img src="../images/bg-path-arrow.png" alt="next">
+            <img src="/MPGreen/images/ico-home.png" alt="홈">
+            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
-            <img src="../images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">사범대학</a>
+			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <a href="/academics/graduate.jsp" class="sidebar-text">대학원</a>
         </div>
     </div>
 
@@ -33,19 +21,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">인문사회대학</a>
+                        <a href="/academics/humanities.html" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">자연과학대학</a>
+                        <a href="/academics/science.html" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">공과대학</a>
+                        <a href="/academics/engineering.html" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">사범대학</a>
+                        <a href="/academics/education.html" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">대학원</a>
+                        <a href="/academics/graduate.html" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +46,7 @@
             </div>
                 <div class="boardLower"> <!--본문(내용 영역)-->
                         <div class="collegeContainer">
-                            <img src="../images/college-introduce-5.jpg" class="collegePhoto">
+                            <img src="/MPGreen/images/college-introduce-5.jpg" class="collegePhoto">
                             <div class="collegeArticle">
                                 <p class="college">GRADUATE SCHOOL</p>
                                 <p class="collegeTitle">학문의 이론과 응용방법을 한층 더 심오하게 연구, 교수 및 지도자적 인경을 도야하고 창의력을 함양</p>
@@ -85,7 +73,7 @@
                                 <tbody>
                                     <tr>
                                         <td>경영대학원
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김경영</td>
                                         <td>051-123-5001</td>
@@ -93,7 +81,7 @@
                                     </tr>
                                     <tr>
                                         <td>경제대학원
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김경제</td>
                                         <td>051-123-5002</td>
@@ -101,7 +89,7 @@
                                     </tr>
                                     <tr>
                                         <td>행정대학원
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김행정</td>
                                         <td>051-123-5003</td>
@@ -109,7 +97,7 @@
                                     </tr>
                                     <tr>
                                         <td>교육대학원
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김교육</td>
                                         <td>051-123-5004</td>
@@ -117,7 +105,7 @@
                                     </tr>
                                     <tr>
                                         <td>산업대학원
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김산업</td>
                                         <td>051-123-5005</td>
@@ -131,5 +119,4 @@
         </div>
     </section>
     </main>
-</body>
-</html>
+<%@ include file="/WEB-INF/views/academics/_footer.jsp" %>

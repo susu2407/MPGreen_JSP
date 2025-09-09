@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ include file="/WEB-INF/views/academic/_header.jsp"%>
+
 
 <main>
-
 <div class="top-bar">
     <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -13,31 +14,43 @@
     </div>
 </div>
 
-
     <section id="container">
-
+    <section id="container">
+      <!-- 좌측 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">학사안내</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item"><a href="/academic/notice.html" class="itemText">공지사항</a></li>
-            <li class="item"><a href="#" class="itemText">학사일정</a></li>
-            <li class="item"><a href="/academic/enroll.html" class="itemText">수강신청</a></li>
-            <li class="item active"><a href="/academic/grade.html" class="itemText">성적</a></li>
-            <li class="item"><a href="#" class="itemText">수료 및 졸업</a></li>
-            <li class="item"><a href="#" class="itemText">자주하는 질문</a></li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/notice.do" class="itemText">공지사항</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/schedule.do" class="itemText">학사일정</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/enroll.do" class="itemText">수강신청</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/grade.do" class="itemText">성적</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/graduation.do" class="itemText">수료 및 졸업</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/faq.do" class="itemText">자주 묻는 질문</a>
+                    </li>
           </ul>
         </div>
       </div>
-        <div class="board"> 
+        <div class="board"> <!--본문 영역-->
         <div class="boardUpper">
             <h3 class="buText">성적</h3>
             </div>
 <div class="boardLower">
 
-
+  <!-- 시험 -->
   <h4>▌시험</h4>
   <p class="sub-title">- 시험은 정기시험, 비정기시험, 추가시험, 재시험 등으로 구분</p>
   <ul>
@@ -46,7 +59,7 @@
     <li>추가시험 : 질병 또는 부득이한 사정으로 정기시험에 응시할 수 없는 학생은 사유와 증빙서류를 첨부하여 추가시험신청서를 제출</li>
   </ul>
 
-
+  <!-- 시험 부정행위자의 처리 -->
   <h4>▌ 시험 부정행위자의 처리</h4>
   <ul>
     <li>시험 중 부정행위가 적발되면 감독교수는 그 행위내용을 시험지 상단에 기록하고 날인한 후 즉시 총장에게 보고</li>
@@ -56,7 +69,7 @@
     <li>부정행위자의 성적표에는 부정행위로 본 사실이 있는 학생임을 기록하여 기타 부정행위할 때 참조</li>
   </ul>
 
-
+  <!-- 성적 -->
   <h4>▌ 성적</h4>
   <p class="sub-title">- 평가내용</p>
   <ul>
@@ -64,7 +77,7 @@
     <li>출석 및 학습태도 10~20%, 정기시험 50~70%, 비정기시험 및 과제 20~30%를 원칙으로 함</li>
   </ul>
 
-
+  <!-- 등급 표 -->
   <h4>▌ 등급</h4>
   <table>
     <thead>

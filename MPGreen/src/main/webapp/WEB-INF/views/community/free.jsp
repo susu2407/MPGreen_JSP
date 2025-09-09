@@ -125,7 +125,6 @@
 	              <a href="${pageContext.request.contextPath}/community/free_write.do" class="btn-write">글쓰기</a>
 	          </div>
 	        </div>
-	      </div>
 	    </section>
   </main>
 

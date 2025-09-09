@@ -1,28 +1,18 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학생지원(수강신청)</title>
-    <link rel="stylesheet" href="/css/student/Student.css">
-    <link rel="stylesheet" href="/css/common/layout.css">
-</head>
-<body>
+<%@ include file="/WEB-INF/views/student/_header.jsp"%>
 
-      <!-- ===== 메인 ===== -->
-  <main>
 
-    <!-- ===== 상단바 ===== -->
-     <div class="top-bar">
-        <div class="top-bar-content">
-            <img src="/images/ico-home.png" alt="홈">
-            <img src="/images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">학생지원</a>
-            <img src="/images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">수강신청내역</a>
+    <main>
+
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">대학소개</a>
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+                <a href="#" class="sidebar-text">총장 인사말</a>
+            </div>
         </div>
-    </div>
 
     <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
@@ -32,19 +22,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">수강신청</a>
+                        <a href="/MPGreen/student/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">수강신청내역</a>
+                        <a href="/MPGreen/student/enroll_list.do" class="itemText">수강신청내역</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">나의교육과정</a>
+                        <a href="/MPGreen/student/curriculum.do" class="itemText">나의교육과정</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">성적조회</a>
+                        <a href="/MPGreen/student/grade-view.do" class="itemText">성적조회</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">학적</a>
+                        <a href="/MPGreen/student/record.do" class="itemText">학적</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +52,7 @@
                         <!-- 왼쪽 링크영역 -->
                         <a href="#" class="select-box">
                         <span class="select-text">2025</span>
-                        <img src="/images/btn-sel-open01.png" alt="드롭다운">
+                        <img src="/MPGreen/images/btn-sel-open01.png" alt="드롭다운">
                         </a>
 
                         <!-- '년' 텍스트 -->
@@ -71,7 +61,7 @@
                         <!-- 오른쪽 링크영역 -->
                         <a href="#" class="select-box small">
                         <span class="select-text">1</span>
-                        <img src="/images/btn-sel-open01.png" alt="드롭다운">
+                        <img src="/MPGreen/images/btn-sel-open01.png" alt="드롭다운">
                         </a>
 
                         <!-- '학기' 텍스트 -->
@@ -174,5 +164,4 @@
 
   </main>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/views/student/_footer.jsp" %>
