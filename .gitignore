@@ -1,5 +1,6 @@
 /.metadata/
 /build/
+servers/
 .env
 node_modules/
 vendor/
