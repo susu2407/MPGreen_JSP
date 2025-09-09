@@ -33,7 +33,7 @@ a{
 }
 
 .board {
-	930px;          /* 전체 영역 */
+	width: 930px;          /* 전체 영역 */
 
 }
 .board, .board * {

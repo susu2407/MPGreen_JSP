@@ -2,7 +2,7 @@
 <%@ include file="./_header.jsp" %>
 <body class="page-community">
   <main>
-    <!-- 상단 경로 -->    <div class="top-bar">
+   <div class="top-bar">
       <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
         <img src="../images/bg-path-arrow.png" alt=">">
@@ -110,29 +110,30 @@
           </table>
 
 
-	          <div class="page">
-	              <div class="prev">
-	                  <a href="#" class="paging">
-	                      <img src="../images/btn-first-page.png">
-	                  </a>
-	                  <a href="#" class="paging">
-	                      <img src="../images/btn-prev-page.png">
-	                  </a>
-	              </div>
-	              <div class="pagenumber">
-	                  <a href="#" class="active">1</a>
-	                  <a href="#">2</a>
-	                  <a href="#">3</a>
-	              </div>
-	              <div class="last">
-	                  <a href="#" class="paging">
-	                      <img src="../images/btn-next-page.png">
-	                  </a>
-	                  <a href="#" class="paging">
-	                      <img src="../images/btn-last-page.png">
-	                  </a>
-	              </div>
-	              <a href="./write.html" class="btn-write">글쓰기</a>
+				<div class="page">
+			    <div class="prev">
+			        <a href="#" class="paging">
+			            <img src="../images/btn-first-page.png">
+			        </a>
+			        <a href="#" class="paging">
+			            <img src="../images/btn-prev-page.png">
+			        </a>
+			    </div>
+			    <div class="pagenumber">
+			        <a href="#" class="active">1</a>
+			        <a href="#">2</a>
+			        <a href="#">3</a>
+			    </div>
+			    <div class="last">
+			        <a href="#" class="paging">
+			            <img src="../images/btn-next-page.png">
+			        </a>
+			        <a href="#" class="paging">
+			            <img src="../images/btn-last-page.png">
+			        </a>
+			    </div>
+			</div>
+	              <a href="${pageContext.request.contextPath}/community/notice_write.do" class="btn-write">글쓰기</a>
 	          </div>
 	        </div>
 	      </div>

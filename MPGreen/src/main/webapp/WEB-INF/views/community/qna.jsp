@@ -25,8 +25,8 @@
   			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
 			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
 			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-			<li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do"  style="color:#fff">자유게시판</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
+			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do"  >자유게시판</a></li>
+			<li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do" style="color:#fff">질문과 답변</a></li>
 			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
           </ul>
         </div>
@@ -39,7 +39,6 @@
         </div>
 
         <div class="notice-wrap">
-
           <form class="notice-toolbar" action="#" method="get">
             <select class="notice-field" name="field" aria-label="검색 대상 선택">
               <option value="all">전체</option>
@@ -127,33 +126,34 @@
           </table>
 
 
-		          <div class="page">
-		              <div class="prev">
-		                  <a href="#" class="paging">
-		                      <img src="../images/btn-first-page.png">
-		                  </a>
-		                  <a href="#" class="paging">
-		                      <img src="../images/btn-prev-page.png">
-		                  </a>
-		              </div>
-		              <div class="pagenumber">
-		                  <a href="#" class="active">1</a>
-		                  <a href="#">2</a>
-		                  <a href="#">3</a>
-		              </div>
-		              <div class="last">
-		                  <a href="#" class="paging">
-		                      <img src="../images/btn-next-page.png">
-		                  </a>
-		                  <a href="#" class="paging">
-		                      <img src="../images/btn-last-page.png">
-		                  </a>
-		              </div>
-		              <a href="./write.html" class="btn-write">글쓰기</a>
-		          </div>
-		        </div>
-		      </div>
-		    </section>
-		  </main>
+				<div class="page">
+			    <div class="prev">
+			        <a href="#" class="paging">
+			            <img src="../images/btn-first-page.png">
+			        </a>
+			        <a href="#" class="paging">
+			            <img src="../images/btn-prev-page.png">
+			        </a>
+			    </div>
+			    <div class="pagenumber">
+			        <a href="#" class="active">1</a>
+			        <a href="#">2</a>
+			        <a href="#">3</a>
+			    </div>
+			    <div class="last">
+			        <a href="#" class="paging">
+			            <img src="../images/btn-next-page.png">
+			        </a>
+			        <a href="#" class="paging">
+			            <img src="../images/btn-last-page.png">
+			        </a>
+			    </div>
+			</div>
+	              <a href="${pageContext.request.contextPath}/community/qna_write.do" class="btn-write">글쓰기</a>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+  </main>
   <%@ include file="./_footer.jsp" %>
  </body>
