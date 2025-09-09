@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>GreenUniversity</title>
+		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
+        <link rel="stylesheet" href="/MPGreen/css/academics/academics.css">
         <link rel="stylesheet" href="/MPGreen/css/common/header.css">
         <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/about/About.css">
-		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
     </head>
 
     <body>
