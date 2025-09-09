@@ -21,19 +21,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/student/enroll.html" class="itemText">수강신청</a>
+                        <a href="${pageContext.request.contextPath}/student/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="/student/enroll-list.html" class="itemText">수강신청내역</a>
+                        <a href="${pageContext.request.contextPath}/student/enroll-list.do" class="itemText">수강신청내역</a>
                     </li>
                     <li class="item">
-                        <a href="/student/curriculum.html" class="itemText">교과과정</a>
+                        <a href="${pageContext.request.contextPath}/student/curriculum.do" class="itemText">교과과정</a>
                     </li>
                     <li class="item">
-                        <a href="/student/grade-view.html" class="itemText">성적조회</a>
+                        <a href="${pageContext.request.contextPath}/student/grade-view.do" class="itemText">성적조회</a>
                     </li>
                     <li class="item">
-                        <a href="/student/record.html" class="itemText">학적</a>
+                        <a href="${pageContext.request.contextPath}/student/record.do" class="itemText">학적</a>
                     </li>
                 </ul>
             </div>

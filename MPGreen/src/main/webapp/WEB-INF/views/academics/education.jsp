@@ -21,25 +21,25 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="${pageContext.request.contextPath}/humanities.do" class="itemText">인문사회대학</a>
+                        <a href="${pageContext.request.contextPath}/academics/humanities.do" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/science.do" class="itemText">자연과학대학</a>
+                        <a href="${pageContext.request.contextPath}/academics/science.do" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/engineering.do" class="itemText">공과대학</a>
+                        <a href="${pageContext.request.contextPath}/academics/engineering.do" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/education.do" class="itemText">사범대학</a>
+                        <a href="${pageContext.request.contextPath}/academics/education.do" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/graduate.do" class="itemText">대학원</a>
+                        <a href="${pageContext.request.contextPath}/academics/graduate.do" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="board"> <!--본문 영역-->
+        <div class="board"> 
             
             <div class="boardUpper">
                 <h3 class="buText">사범대학</h3>
