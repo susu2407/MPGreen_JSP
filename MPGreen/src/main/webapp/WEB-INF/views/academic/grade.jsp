@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ include file="/WEB-INF/views/academic/_header.jsp"%>
+
 
 <main>
 
@@ -22,12 +24,24 @@
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item"><a href="/academic/notice.html" class="itemText">공지사항</a></li>
-            <li class="item"><a href="#" class="itemText">학사일정</a></li>
-            <li class="item"><a href="/academic/enroll.html" class="itemText">수강신청</a></li>
-            <li class="item active"><a href="/academic/grade.html" class="itemText">성적</a></li>
-            <li class="item"><a href="#" class="itemText">수료 및 졸업</a></li>
-            <li class="item"><a href="#" class="itemText">자주하는 질문</a></li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/notice.do" class="itemText">공지사항</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/schedule.do" class="itemText">학사일정</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/enroll.do" class="itemText">수강신청</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/grade.do" class="itemText">성적</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/graduation.do" class="itemText">수료 및 졸업</a>
+                    </li>
+                    <li class="item">
+                        <a href="/MPGreen/academic/faq.do" class="itemText">자주 묻는 질문</a>
+                    </li>
           </ul>
         </div>
       </div>
