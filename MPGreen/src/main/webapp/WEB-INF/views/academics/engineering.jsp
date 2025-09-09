@@ -1,19 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/academics/_header.jsp" %>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common/layout.css">
+    <link rel="stylesheet" href="../css/academics/academics.css">
+    <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css">
+</head>
+<body>
+          <!-- ===== 메인 ===== -->
   <main>
 
-    <div class="top-bar">
+    <!-- ===== 상단바 ===== -->
+     <div class="top-bar"> 
         <div class="top-bar-content">
-            <img src="/MPGreen/images/ico-home.png" alt="홈">
-            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <img src="../images/ico-home.png" alt="홈">
+            <img src="../images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
-			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academics/engineering.html" class="sidebar-text">공과대학</a>
+            <img src="../images/bg-path-arrow.png" alt="next">
+            <a href="#" class="sidebar-text">사범대학</a>
         </div>
     </div>
 
-   <section id="container"> 
+    <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
                 <h2 class="sbTitle">대학·대학원</h2> <!--사이드바 제목-->
@@ -21,19 +33,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/academics/humanities.html" class="itemText">인문사회대학</a>
+                        <a href="#" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/science.html" class="itemText">자연과학대학</a>
+                        <a href="#" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/engineering.html" class="itemText">공과대학</a>
+                        <a href="#" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/education.html" class="itemText">사범대학</a>
+                        <a href="#" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/graduate.html" class="itemText">대학원</a>
+                        <a href="#" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +57,7 @@
             </div>
                 <div class="boardLower"> <!--본문(내용 영역)-->
                         <div class="collegeContainer">
-                            <img src="/MPGreen/images/college-introduce-3.jpg" class="collegePhoto">
+                            <img src="../images/college-introduce-3.jpg" class="collegePhoto">
                             <div class="collegeArticle">
                                 <p class="college">Engineering</p>
                                 <p class="collegeTitle">기본 공학교육 및 산업현장과 연계된 산학 협동을 위한 학문을 교수 · 연구</p>
@@ -71,7 +83,7 @@
                                 <tbody>
                                     <tr>
                                         <td>기계공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김기계</td>
                                         <td>051-123-3001</td>
@@ -79,7 +91,7 @@
                                     </tr>
                                     <tr>
                                         <td>전자공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김전자</td>
                                         <td>051-123-3002</td>
@@ -87,7 +99,7 @@
                                     </tr>
                                     <tr>
                                         <td>전기공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김전기</td>
                                         <td>051-123-3003</td>
@@ -95,7 +107,7 @@
                                     </tr>
                                     <tr>
                                         <td>컴퓨터공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김컴공</td>
                                         <td>051-123-3004</td>
@@ -103,7 +115,7 @@
                                     </tr>
                                     <tr>
                                         <td>건축공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김건축</td>
                                         <td>051-123-3005</td>
@@ -111,7 +123,7 @@
                                     </tr>
                                     <tr>
                                         <td>재료공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김재료</td>
                                         <td>051-123-3006</td>
@@ -119,7 +131,7 @@
                                     </tr>
                                     <tr>
                                         <td>화학공학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김화확</td>
                                         <td>051-123-3007</td>
@@ -132,4 +144,6 @@
         </div>
     </section>
     </main>
-<%@ include file="/WEB-INF/views/academics/_footer.jsp" %>
+
+</body>
+</html>

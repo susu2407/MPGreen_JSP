@@ -131,6 +131,8 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </main>
-<%@ include file="/WEB-INF/views/admission/_footer.jsp" %>
+</body>
+</html>

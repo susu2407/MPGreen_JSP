@@ -1,15 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/academics/_header.jsp" %>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인문사회대학</title>
+    <link rel="stylesheet" href="../css/common/layout.css">
+    <link rel="stylesheet" href="../css/academics/academics.css">
+    <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css">
+<body>
+          <!-- ===== 메인 ===== -->
   <main>
 
-    <div class="top-bar">
+    <!-- ===== 상단바 ===== -->
+     <div class="top-bar"> 
         <div class="top-bar-content">
-            <img src="/MPGreen/images/ico-home.png" alt="홈">
-            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <img src="../images/ico-home.png" alt="홈">
+            <img src="../images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
-			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academics/humanities.html" class="sidebar-text">인문사회대학</a>
+            <img src="../images/bg-path-arrow.png" alt="next">
+            <a href="#" class="sidebar-text">인문사회대학</a>
         </div>
     </div>
 
@@ -21,31 +32,31 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/academics/humanities.html" class="itemText">인문사회대학</a>
+                        <a href="#" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/science.html" class="itemText">자연과학대학</a>
+                        <a href="#" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/engineering.html" class="itemText">공과대학</a>
+                        <a href="#" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/education.html" class="itemText">사범대학</a>
+                        <a href="#" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="/academics/graduate.html" class="itemText">대학원</a>
+                        <a href="#" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
         </div>
-     	<div class="board"> <!--본문 영역-->
+     <div class="board"> <!--본문 영역-->
             
             <div class="boardUpper">
                 <h3 class="buText">인문사회대학</h3>
             </div>
                 <div class="boardLower"> <!--본문(내용 영역)-->
                         <div class="collegeContainer">
-                            <img src="/MPGreen/images/college-introduce-1.jpg" class="collegePhoto">
+                            <img src="../images/college-introduce-1.jpg" class="collegePhoto">
                             <div class="collegeArticle">
                                 <p class="college">Humanities And Social Sciences</p>
                                 <p class="collegeTitle">인문, 사회분야의 다양하고 심화된 이론을 연구</p>
@@ -74,7 +85,7 @@
                                 <tbody>
                                     <tr>
                                         <td>국어국문학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김국어</td>
                                         <td>051-123-1001</td>
@@ -82,7 +93,7 @@
                                     </tr>
                                     <tr>
                                         <td>영어영문학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김영어</td>
                                         <td>051-123-1002</td>
@@ -90,7 +101,7 @@
                                     </tr>
                                     <tr>
                                         <td>일어일문학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김일어</td>
                                         <td>051-123-1003</td>
@@ -98,7 +109,7 @@
                                     </tr>
                                     <tr>
                                         <td>중어중문학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김중어</td>
                                         <td>051-123-1004</td>
@@ -106,7 +117,7 @@
                                     </tr>
                                     <tr>
                                         <td>역사학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김역사</td>
                                         <td>051-123-1005</td>
@@ -114,7 +125,7 @@
                                     </tr>
                                     <tr>
                                         <td>경제학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김경제</td>
                                         <td>051-123-1006</td>
@@ -122,7 +133,7 @@
                                     </tr>
                                     <tr>
                                         <td>경영학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김경영</td>
                                         <td>051-123-1007</td>
@@ -130,7 +141,7 @@
                                     </tr>
                                     <tr>
                                         <td>법학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김법학</td>
                                         <td>051-123-1008</td>
@@ -138,7 +149,7 @@
                                     </tr>
                                     <tr>
                                         <td>철학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김철학</td>
                                         <td>051-123-1009</td>
@@ -154,7 +165,7 @@
                                     </tr>
                                     <tr>
                                         <td>행정학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김행정</td>
                                         <td>051-123-1011</td>
@@ -162,7 +173,7 @@
                                     </tr>
                                     <tr>
                                         <td>사회복지학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김사회</td>
                                         <td>051-123-1012</td>
@@ -170,7 +181,7 @@
                                     </tr>
                                     <tr>
                                         <td>유아교육학과
-                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
+                                            <a href="#"><img src="../images/ico_link.png"></a>
                                         </td>
                                         <td>김유아</td>
                                         <td>051-123-1013</td>
@@ -183,4 +194,6 @@
         </div>
     </section>
     </main>
-<%@ include file="/WEB-INF/views/academics/_footer.jsp" %>
+    <!-- ===== 푸터 ===== -->
+</body>
+</html>

@@ -1,15 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/academic/_header.jsp" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="../css/common/layout.css">
+    <link rel="stylesheet" href="../css/common/header.css">
+    <link rel="stylesheet" href="../css/common/footer.css">
 
+    <link rel="stylesheet" href="../css/academic/Academic.css">
+</head>
+<body>
+      <!-- ===== 메인 ===== -->
   <main>
-
+    <!-- ===== 상단바 ===== -->
     <div class="top-bar">
         <div class="top-bar-content">
-            <img src="/MPGreen/images/ico-home.png" alt="홈">
-            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <img src="../images/ico-home.png" alt="홈">
+            <img src="../images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">학사안내</a>
-            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academic/notice.html" class="sidebar-text">공지사항   </a>
+            <img src="../images/bg-path-arrow.png" alt="next">
+            <a href="#" class="sidebar-text">공지사항   </a>
         </div>
     </div>
 
@@ -21,22 +33,22 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/academic/notice.html" class="itemText">공지사항</a>
+                        <a href="#" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/schedule.html" class="itemText">학사일정</a>
+                        <a href="#" class="itemText">학사일정</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/enroll.html" class="itemText">수강신청</a>
+                        <a href="#" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/grade.html" class="itemText">성적</a>
+                        <a href="#" class="itemText">성적</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/graduation.html" class="itemText">수료 및 졸업</a>
+                        <a href="#" class="itemText">수료 및 졸업</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/faq.html" class="itemText">자주하는질문</a>
+                        <a href="#" class="itemText">자주하는질문</a>
                     </li>
                 </ul>
             </div>
@@ -93,10 +105,10 @@
                     <div class="page">
                         <div class="prev">
                             <a href="#" class="paging">
-                                <img src="/MPGreen/images/btn-first-page.png">
+                                <img src="../images/btn-first-page.png">
                             </a>
                             <a href="#" class="paging">
-                                <img src="/MPGreen/images/btn-prev-page.png">
+                                <img src="../images/btn-prev-page.png">
                             </a>
                         </div>
                         <div class="pagenumber">
@@ -106,15 +118,17 @@
                         </div>
                         <div class="last">
                             <a href="#" class="paging">
-                                <img src="/MPGreen/images/btn-next-page.png">
+                                <img src="../images/btn-next-page.png">
                             </a>
                             <a href="#" class="paging">
-                                <img src="/MPGreen/images/btn-last-page.png">
+                                <img src="../images/btn-last-page.png">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
   </main>
-<%@ include file="/WEB-INF/views/admission/_footer.jsp" %>
+</body>
+</html>
