@@ -1,11 +1,24 @@
 /* ========== 헤더 CSS ========== */
 /* --- 상단 파란색 유틸 메뉴 영역 --- */
+* {
+    margin: 0;
+    padding: 0px;
+}
 header {
     margin: 0 auto;
     width: 100%;
-    height: 100%;
+
+    box-sizing: border-box;
     border-bottom: 1px solid #eee;
 }
+a {
+    text-decoration: none;
+    color: inherit; /* 부모 요소의 글자색을 따르도록 수정 */
+}
+ul, ol {
+    list-style: none;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
