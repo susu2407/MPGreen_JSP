@@ -1,28 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="../css/common/common.css"> -->
-    <link rel="stylesheet" href="../css/common/layout.css">
-    <link rel="stylesheet" href="../css/academics/academics.css">
-    <link rel="stylesheet" href="../css/common/header.css">
-    <link rel="stylesheet" href="../css/common/footer.css">
-</head>
-<body>
-           <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/academics/_header.jsp" %>
+
   <main>
 
-    <!-- ===== 상단바 ===== -->
-     <div class="top-bar"> 
+    <div class="top-bar">
         <div class="top-bar-content">
-            <img src="../images/ico-home.png" alt="홈">
-            <img src="../images/bg-path-arrow.png" alt="next">
+            <img src="/MPGreen/images/ico-home.png" alt="홈">
+            <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
-            <img src="../images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">자연과학대학</a>
+			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+            <a href="/academics/science.html" class="sidebar-text">자연과학대학</a>
         </div>
     </div>
 
@@ -34,19 +21,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">인문사회대학</a>
+                        <a href="/academics/humanities.html" class="itemText">인문사회대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">자연과학대학</a>
+                        <a href="/academics/science.html" class="itemText">자연과학대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">공과대학</a>
+                        <a href="/academics/engineering.html" class="itemText">공과대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">사범대학</a>
+                        <a href="/academics/education.html" class="itemText">사범대학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">대학원</a>
+                        <a href="/academics/graduate.html" class="itemText">대학원</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +46,7 @@
             </div>
                 <div class="boardLower"> <!--본문(내용 영역)-->
                         <div class="collegeContainer">
-                            <img src="../images/college-introduce-2.jpg" class="collegePhoto">
+                            <img src="/MPGreen/images/college-introduce-2.jpg" class="collegePhoto">
                             <div class="collegeArticle">
                                  <p class="college">Natural Sciences</p>
                                  <p class="collegeTitle">자연과학의 기초 이론과 교수 연구, 융합 및 응용과학의 토대 제공</p>
@@ -87,7 +74,7 @@
                                 <tbody>
                                     <tr>
                                         <td>수학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김수학</td>
                                         <td>051-123-2001</td>
@@ -95,7 +82,7 @@
                                     </tr>
                                     <tr>
                                         <td>물리학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김물리</td>
                                         <td>051-123-2002</td>
@@ -103,7 +90,7 @@
                                     </tr>
                                     <tr>
                                         <td>화학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김화학</td>
                                         <td>051-123-2003</td>
@@ -111,7 +98,7 @@
                                     </tr>
                                     <tr>
                                         <td>전문학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김전문</td>
                                         <td>051-123-2004</td>
@@ -119,7 +106,7 @@
                                     </tr>
                                     <tr>
                                         <td>지구과학학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김지구</td>
                                         <td>051-123-2005</td>
@@ -127,7 +114,7 @@
                                     </tr>
                                     <tr>
                                         <td>생명과학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김생명</td>
                                         <td>051-123-2006</td>
@@ -135,7 +122,7 @@
                                     </tr>
                                     <tr>
                                         <td>미생물학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김생물</td>
                                         <td>051-123-2007</td>
@@ -143,7 +130,7 @@
                                     </tr>
                                     <tr>
                                         <td>해양학과
-                                            <a href="#"><img src="../images/ico_link.png"></a>
+                                            <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
                                         <td>김해양</td>
                                         <td>051-123-2008</td>
@@ -156,5 +143,4 @@
         </div>
     </section>
     </main>
-</body>
-</html>
+<%@ include file="/WEB-INF/views/academics/_footer.jsp" %>
