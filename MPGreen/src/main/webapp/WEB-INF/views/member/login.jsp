@@ -1,16 +1,10 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 페이지</title>
-    <!-- 기본 스타일 초기화 및 폰트 설정 -->
-    <link rel="stylesheet" href="../css/common/common.css">
-    <!-- 로그인 페이지 CSS 설정 -->
-    <link rel="stylesheet" href="../css/member/login.css">
-</head>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/views/common/_header.jsp" %>
+<%@ include file="/WEB-INF/views/common/layout.jsp" %>
+
 <body>
+
+<!-- layout 헤더 필요 -->
 
     <div class="container">
         <div class="login-form">
@@ -60,5 +54,4 @@
         </div>
     </div>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/views/common/_footer.jsp"%>

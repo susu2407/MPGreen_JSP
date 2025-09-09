@@ -1,6 +1,6 @@
 /* =============== 푸터 CSS =============== */
 footer {
-    height: 200px;
+    height: 100%;
     flex-shrink: 0;  /* 푸터 크기 고정 */
     background-color: #19202D; 
     color: #a8a9ac;
