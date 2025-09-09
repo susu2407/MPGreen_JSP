@@ -115,7 +115,7 @@
                     <thead>
                         <tr>
                         <th class="col-qualification" colspan="3">자격</th>
-                        <th class="col-procedure" rowspan="2" colspan="2">신청절차</th>
+                        <th class="col-procedure" rowspan="2">신청절차</th>
                         </tr>
                         <tr>
                         <th class="col-semester">이수학기</th>
