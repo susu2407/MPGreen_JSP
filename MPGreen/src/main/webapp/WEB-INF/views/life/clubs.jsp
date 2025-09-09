@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-  <!-- ===== 메인 ===== -->
+<%@ include file="./_header.jsp" %>
+<body class="page-life">
   <main>
-    <!-- 상단 경로 -->
+
     <div class="top-bar">
       <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -14,36 +14,36 @@
     </div>
 
     <section id="container">
-      <!-- 좌측 사이드바 -->
+
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">대학생활</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item active"><a class="itemText" href="./clubs.html" style="color:#fff">학생회 소개</a></li>
-            <li class="item"><a class="itemText" href="./study.html">동아리/스터디</a></li>
-            <li class="item"><a class="itemText" href="./cafeteria.html">식단안내</a></li>
-            <li class="item"><a class="itemText" href="./gallery.html">갤러리</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/life/clubs.do"  style="color:#fff">학생회 소개</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/study.do">동아리/스터디</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/cafeteria.do">식단안내</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/life/gallery.do">갤러리</a></li>
           </ul>
         </div>
       </div>
 
-      <!-- 본문 -->
+
       <div class="board">
         <div class="boardUpper">
           <h3 class="buText">학생회 소개</h3>
         </div>
 
         <div class="life-wrap">
-          <!-- 소개문 -->
+
           <div class="life-brief">
             그린대학교 총학생회는 학생들의 권익 보호와 더 나은 캠퍼스 문화를 위해
             소통·연대·실행을 핵심가치로 활동합니다. 학사·복지·문화·소통 4개 본부를 중심으로
             다양한 사업을 추진하고 있습니다.
           </div>
 
-          <!-- 정보 표 -->
+
           <table class="life-table">
             <colgroup>
               <col class="col-head">
@@ -69,7 +69,7 @@
             </tbody>
           </table>
 
-          <!-- 부서 카드 -->
+
           <div class="life-cards">
             <div class="life-card">
               <h4>총학생회장</h4>
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <!-- 안내 -->
+
           <div class="life-note">
             ※ 상세 조직도/사업 계획서는 추후 공지에서 안내됩니다.
           </div>
@@ -97,5 +97,6 @@
       </div>
     </section>
   </main>
-
+<%@ include file="./_footer.jsp" %>
+</body>
   
