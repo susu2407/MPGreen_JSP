@@ -1,20 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>입학상담</title>
-    <link rel="stylesheet" href="../css/common/layout.css">
-    <link rel="stylesheet" href="../css/common/header.css">
-    <link rel="stylesheet" href="../css/common/footer.css">
-
-    <link rel="stylesheet" href="../css/admission/Admission.css">
-</head>
-<body>
-      <!-- ===== 메인 ===== -->
+<%@ include file="/WEB-INF/views/admission/_header.jsp" %>
+  
   <main>
-    <!-- ===== 상단바 ===== -->
      <div class="top-bar">
         <div class="top-bar-content">
             <img src="../images/ico-home.png" alt="홈">
@@ -25,7 +12,7 @@
         </div>
     </div>
 
-    <section id="container"> 
+        <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
                 <h2 class="sbTitle">입학안내</h2> <!--사이드바 제목-->
@@ -33,19 +20,19 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="#" class="itemText">공지사항</a>
+                        <a href="${pageContext.request.contextPath}/admission/notice.do" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">수시모집</a>
+                        <a href="${pageContext.request.contextPath}/adimssion/early.do" class="itemText">수시모집</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">정시모집</a>
+                        <a href="${pageContext.request.contextPath}/adimssion/regular.do" class="itemText">정시모집</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">편입학</a>
+                        <a href="${pageContext.request.contextPath}/adimssion/transfer.do" class="itemText">편입학</a>
                     </li>
                     <li class="item">
-                        <a href="#" class="itemText">입학상담</a>
+                        <a href="${pageContext.request.contextPath}/adimssion/consult.do" class="itemText">입학상담</a>
                     </li>
                 </ul>
             </div>
