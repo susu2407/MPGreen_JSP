@@ -5,6 +5,7 @@
 <body>
 
 <!-- layout 헤더 필요 -->
+
     <div class="container">
         <div class="login-form">
             <h1 class="login-title">LOGIN</h1>
@@ -53,4 +54,4 @@
         </div>
     </div>
 
-<%@ include file="WEB-ING/views/common/_footer.jsp"%>
+<%@ include file="/WEB-INF/views/common/_footer.jsp"%>

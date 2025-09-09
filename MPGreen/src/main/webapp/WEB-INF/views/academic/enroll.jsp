@@ -105,7 +105,7 @@
       <li>철회 및 변경은 반드시 학사일정에 명시된 기간 내 진행해야 합니다.</li>
     </ul>
 
-    <button class="btn-enroll" style="margin-top:16px; padding:10px 20px; background:#3F97F6; color:#fff; border:0; font-weight:700; cursor:pointer">
+    <button class="btn-enroll" style="margin-top:16px; padding:10px 20px; background:#3F97F6; color:#fff; border:0; border-radius:6px; font-weight:700; cursor:pointer">
       수강신청하기
     </button>
   </div>
