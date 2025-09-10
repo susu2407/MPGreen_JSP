@@ -1,7 +1,7 @@
-USE `green2` ;
-
+USE `greendae2` ;
+SET FOREIGN_KEY_CHECKS = 1; 
 /* 대학 데이터 삽입 || 대학명, 대학영문명, 대학 소개 제목, 대학 소개 내용, 소개 이미지 */
-SELECT * FROM COLLEGE;
+SELECT * FROM college;
 DELETE FROM college WHERE college = " ";
 INSERT INTO college (COLLEGE, COLLEGE_ENG_NAME, INTRO_TITLE, INTRO_CONTENT)
 	VALUES ("인문사회대학", "HUMANITIES AND SOCIAL SCIENCES", "인문대 짱짱", "인문대는 못하는 게 뭘까"),
@@ -224,7 +224,6 @@ DELETE FROM course WHERE s_id = " ";
  SET FOREIGN_KEY_CHECKS = 0;
  SELECT @@FOREIGN_KEY_CHECKS;
  
-/* 추가필요: 수업시간ed 컬럼 */
 INSERT INTO course 
 	(college, department_id, grade, semester, credit,
 	completion_type, professor, course_name, course_desc, class_period, class_time, end_time, class_day, 
@@ -243,23 +242,62 @@ INSERT INTO course
 
 /* 성적 데이터 삽입 */
 /*성적 테이블
+순서(자동 AI)
 학번, 과목코드, 백분위점수, 등급, 점수*/
 
 SELECT * FROM grade;
 SELECT * FROM student;
+SELECT * FROM course;
 DELETE FROM grade WHERE s_id = " ";
  /* 시퀀스 포함 초기화*/
  TRUNCATE TABLE grade;
  
-/* 강의 데이터 넣고 시작
-INSERT INTO grade (s_id, c_code, per_score, rank, score) 
+
+INSERT INTO grade (student_s_id, c_code, per_score, c_rank, score) 
 	VALUES
-	(2025010001);
+	(2025010001, 202501010001, 99.0, "A+", 4.5),
+    (2025010001, 202501010002, 90.0, "A", 4.0),
+    (2025010001, 202501020001, 85.0, "B+", 3.5),
+    (2025010001, 202513010001, 80.0, "B", 3.0),
+    (2025010001, 202522020001, null, null, null),
+    (2025010001, 202528010001, null, null, null);
     
-*/
-
-
 
 /* 수강신청 데이터 삽입 */
 
-select * from course;
+
+
+/* 게시판 데이터 삽입 */
+/* 게시판 테이블alter
+(글번호||자동) // ( * || 자동) = 자동으로 작성됨, (*) = NULL 허용
+분류, 글제목, 글내용, 작성자 종류, 작성자id, (글작성일자, 글수정일자, 조회수 || 자동 작성),
+(뉴스/칼럼구분), (비밀글여부 || 자동), (답변상태, 답변내용)
+*/
+INSERT INTO cboard 
+	(category, title, content, writer_type, writer_id)
+	value
+    ("notice", "김민철의 호소문", "git add . 하면 안됩니다", "student", 2025010001);
+
+
+
+/* 유저 데이터 삽입 */
+/*
+회원아이디, 비번, 이름, 폰번호, 이메일, (우편, 기본, 상세), (가입일시 || 자동)
+*/
+INSERT INTO uuser 
+	(u_id, pass, uname, phone, email)
+	value
+    ("green02", "green02!", "김그린", "010-1234-5670", "kim@green.com");
+    
+
+select * from college;
+select * from department;
+SELECT * FROM course;
+SELECT * FROM professor;
+SELECT * FROM student;
+select * from uuser;
+SELECT * FROM grade;
+select * from cboard_comment;
+select * from cboard;
+select * from cboard_file;
+select * from fnq;
