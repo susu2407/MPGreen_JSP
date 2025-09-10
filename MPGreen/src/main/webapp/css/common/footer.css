@@ -105,7 +105,7 @@ footer .footer-tools select {
     width: 200px;
     height: 36px;
     background: #131721          /* 배경색 및 화살표 */
-                url(/images/bg-related-arr-open.png) 
+                url('/MPGreen/images/bg-related-arr-open.png') 
                 no-repeat right 
                 10px 
                 center;
