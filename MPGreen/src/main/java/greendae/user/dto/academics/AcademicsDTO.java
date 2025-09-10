@@ -3,9 +3,9 @@ package greendae.user.dto.academics;
 public class AcademicsDTO {
 	
 	private String dep_name;
-	private String pro_name;
-	private String dep_no;
-	private String remark;
+	private String dean;
+	private String dep_tel;
+//	private String remark;
 	
 	public String getDep_name() {
 		return dep_name;
@@ -15,34 +15,34 @@ public class AcademicsDTO {
 		this.dep_name = dep_name;
 	}
 	
-	public String getPro_name() {
-		return pro_name;
+	public String getDean() {
+		return dean;
 	}
 	
-	public void setPro_name(String pro_name) {
-		this.pro_name = pro_name;
+	public void setDean(String dean) {
+		this.dean = dean;
 	}
 	
-	public String getDep_no() {
-		return dep_no;
+	public String getDep_tel() {
+		return dep_tel;
 	}
 	
-	public void setDep_no(String dep_no) {
-		this.dep_no = dep_no;
+	public void setDep_tel(String dep_tel) {
+		this.dep_tel = dep_tel;
 	}
 	
-	public String getRemark() {
+	/*public String getRemark() {
 		return remark;
 	}
 	
 	public void setRemark(String remark) {
 		this.remark = remark;
-	}
+	}*/
 	
 	@Override
 	public String toString() {
-		return "AcademicsDTO [dep_name=" + dep_name + ", pro_name=" + pro_name + ", dep_no=" + dep_no + ", remark=" + remark
-				+ "]";
+		return "AcademicsDTO [dep_name=" + dep_name + ", dean=" + dean + ", dep_tel=" + dep_tel + /*", remark=" + remark
+				+*/ "]";
 	}
 	
 	
