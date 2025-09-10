@@ -20,7 +20,7 @@
       <!-- 좌측 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
-          <h2 class="sbTitle">커뮤니티</h2>
+          <h2 class="sbTitle">입학안내</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list"> <!--사이드바 리스트-->
@@ -46,7 +46,7 @@
       <!-- 본문 상세보기 -->
       <div class="view-wrap">
         <div class="view-header">
-          <h2 class="view-title">자유게시판 글 제목 예시</h2>
+          <h2 class="view-title">입학상담 글 제목 예시</h2>
           <div class="view-meta">
             <span>작성자: 홍길동</span>
             <span>작성일: 2024.04.09</span>
@@ -56,7 +56,7 @@
 
         <div class="view-content">
           <p>
-            자유게시판 글 내용이 여기에 표시됩니다.<br>
+            입학상담 글 내용이 여기에 표시됩니다.<br>
             이미지, 링크, 텍스트 등 자유롭게 작성된 게시글 내용이 출력됩니다.
           </p>
         </div>
@@ -70,7 +70,7 @@
                 <span class="comment-date">2024.04.09 13:00</span>
               </div>
               <div class="comment-content">
-                자유게시판 첫 댓글입니다!
+                입학상담ㄴ첫 댓글입니다!
               </div>
             </li>
           </ul>

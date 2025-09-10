@@ -73,7 +73,7 @@
 
             <div class="form-actions">
               <button type="submit" class="btn-submit">등록</button>
-              <a href="./consult.html" class="btn-cancel">취소</a>
+              <a href="${pageContext.request.contextPath}/consult.do" class="btn-cancel">취소</a>
             </div>
           </form>
         </div>

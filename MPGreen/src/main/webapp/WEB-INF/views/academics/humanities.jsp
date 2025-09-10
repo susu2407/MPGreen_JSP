@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/academics/_header.jsp" %>
 
   <main>
@@ -9,7 +10,7 @@
             <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
 			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academics/humanities.html" class="sidebar-text">인문사회대학</a>
+            <a href="${pageContext.request.contextPath}/academics/humanities.do" class="sidebar-text">인문사회대학</a>
         </div>
     </div>
 
