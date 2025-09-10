@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
 
-<body class="page-community notice-write">
+<body class="page-community notice-delete">
   <main>
     <div class="top-bar">
       <div class="top-bar-content">
@@ -11,7 +11,7 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="${pageContext.request.contextPath}/community/notice.do" class="sidebar-text">공지사항</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/notice_write.do" class="sidebar-text">글쓰기</a>
+        <a href="${pageContext.request.contextPath}/community/notice_delete.do?boardId=${param.boardId}" class="sidebar-text">글삭제</a>
       </div>
     </div>
 
@@ -38,36 +38,16 @@
         </div>
 
         <div class="notice-wrap">
-          <form class="write-form" action="${pageContext.request.contextPath}/community/notice_write.do" method="post">
-            
-            <div class="form-row">
-              <label for="title">제목</label>
-              <input type="text" id="title" name="title" required>
-            </div>
+          <form class="delete-form" action="${pageContext.request.contextPath}/community/notice_delete.do" method="post">
+            <input type="hidden" name="boardId" value="${param.boardId}"/>
 
             <div class="form-row">
-              <label for="writer">작성자</label>
-              <!-- 로그인된 사용자 정보 활용 -->
-              <input type="hidden" name="writerId" value="${sessionScope.loginUser.userId}">
-              <input type="text" id="writer" value="${sessionScope.loginUser.userName}" readonly>
+              <p>정말로 <strong>이 게시글</strong>을 삭제하시겠습니까?</p>
             </div>
-
-            <div class="form-row">
-              <label for="content">내용</label>
-              <textarea id="content" name="content" rows="10" required></textarea>
-            </div>
-
-            <!-- 파일 업로드 기능 나중에 구현할 때만 사용 -->
-            <!--
-            <div class="form-row">
-              <label for="file">첨부파일</label>
-              <input type="file" id="file" name="file">
-            </div>
-            -->
 
             <div class="form-actions">
-              <button type="submit" class="btn-submit">등록</button>
-              <a href="${pageContext.request.contextPath}/community/notice.do" class="btn-cancel">취소</a>
+              <button type="submit" class="btn-submit">삭제</button>
+              <a href="${pageContext.request.contextPath}/community/notice_view.do?boardId=${param.boardId}" class="btn-cancel">취소</a>
             </div>
           </form>
         </div>
@@ -75,5 +55,3 @@
     </section>
   </main>
 </body>
-
-

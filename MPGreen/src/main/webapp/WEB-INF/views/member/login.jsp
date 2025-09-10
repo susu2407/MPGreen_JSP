@@ -138,4 +138,3 @@
             </div>
         </div>
     </main>
-<%@ include file="WEB-INF/views/common/_footer.jsp" %>

@@ -1,8 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="./_header.jsp" %>
 
 <body class="page-community view-page">
   <main>
+    <!-- 경로 표시 -->
     <div class="top-bar">
       <div class="top-bar-content">
         <img src="../images/ico-home.png" alt="홈">
@@ -11,11 +13,12 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="${pageContext.request.contextPath}/community/notice.do" class="sidebar-text">공지사항</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/view.do" class="sidebar-text">게시글 보기</a>
+        <a href="#" class="sidebar-text">게시글 보기</a>
       </div>
     </div>
 
     <section id="container">
+      <!-- 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">커뮤니티</h2>
@@ -32,69 +35,82 @@
         </div>
       </div>
 
+      <!-- 본문 -->
       <div class="view-wrap">
+        <!-- 글 헤더 -->
         <div class="view-header">
-          <h2 class="view-title">2025학년도 1학기 장학금 신청 안내</h2>
+          <h2 class="view-title">${board.title}</h2>
           <div class="view-meta">
-            <span>작성자: 학사지원실</span>
-            <span>작성일: 2024.04.09</span>
-            <span>조회수: 120</span>
+            <span>작성자: ${board.writerId}</span>
+            <span>작성일: ${board.created_at}</span>
+            <span>조회수: ${board.viewCount}</span>
           </div>
         </div>
 
+        <!-- 글 내용 -->
         <div class="view-content">
-          <p>
-            장학금 신청 안내 내용이 여기에 표시됩니다.<br>
-            첨부파일이나 이미지가 있다면 이 영역에 같이 보여줄 수 있습니다.
-          </p>
+          <p>${board.content}</p>
         </div>
 
-        <div class="view-file">
-          <strong>첨부파일:</strong> 
-          <a href="#">scholarship_form.pdf</a>
-        </div>
+        <!-- 첨부파일 (나중에 구현) -->
+        <%-- 
+        <c:if test="${not empty board.files}">
+          <div class="view-file">
+            <strong>첨부파일:</strong>
+            <c:forEach var="file" items="${board.files}">
+              <p>
+                <a href="${pageContext.request.contextPath}/community/file/download.do?fileId=${file.fileId}">
+                  ${file.fileName}
+                </a> (${file.fileSize} bytes)
+              </p>
+            </c:forEach>
+          </div>
+        </c:if>
+        --%>
 
+        <!-- 댓글 목록 -->
         <div class="comment-section">
           <h4>댓글</h4>
+          <c:if test="${empty comments}">
+            <p class="empty">등록된 댓글이 없습니다.</p>
+          </c:if>
           <ul class="comment-list">
-            <li>
-              <div class="comment-meta">
-                <span class="comment-writer">홍길동</span>
-                <span class="comment-date">2024.04.09 13:00</span>
-              </div>
-              <div class="comment-content">
-                신청 방법이 자세히 나와있어 유용합니다. 감사합니다!
-              </div>
-            </li>
-            <li>
-              <div class="comment-meta">
-                <span class="comment-writer">이순신</span>
-                <span class="comment-date">2024.04.09 14:30</span>
-              </div>
-              <div class="comment-content">
-                서류 제출 기한이 언제까지인지 추가 안내 부탁드립니다.
-              </div>
-            </li>
+            <c:forEach var="comment" items="${comments}">
+              <li>
+                <div class="comment-meta">
+                  <span class="comment-writer">${comment.writerId}</span>
+                  <span class="comment-date">${comment.created_at}</span>
+                </div>
+                <div class="comment-content">
+                  ${comment.content}
+                </div>
+                <div class="comment-actions">
+                  <a href="${pageContext.request.contextPath}/community/comment_delete.do?commentId=${comment.commentId}&boardId=${board.boardId}" class="remove">삭제</a>
+                </div>
+              </li>
+            </c:forEach>
           </ul>
         </div>
 
+        <!-- 댓글 작성 -->
         <div class="comment-form">
           <form action="${pageContext.request.contextPath}/community/commentWrite.do" method="post">
-            <input type="text" name="writer" placeholder="작성자" required>
+            <input type="hidden" name="boardId" value="${board.boardId}">
+            <input type="hidden" name="writerId" value="admin"> <%-- 로그인 붙이기 전까지 테스트용 --%>
             <textarea name="content" rows="3" placeholder="댓글을 입력하세요" required></textarea>
             <button type="submit" class="btn-submit">댓글 등록</button>
           </form>
         </div>
 
+        <!-- 액션 버튼 -->
         <div class="view-actions">
           <a href="${pageContext.request.contextPath}/community/notice.do" class="btn">목록</a>
-          <a href="${pageContext.request.contextPath}/community/edit.do" class="btn primary">수정</a>
-          <a href="${pageContext.request.contextPath}/community/delete.do" class="btn danger">삭제</a>
+          <a href="${pageContext.request.contextPath}/community/notice_edit.do?boardId=${board.boardId}" class="btn primary">수정</a>
+          <a href="${pageContext.request.contextPath}/community/notice_delete.do?boardId=${board.boardId}" class="btn danger">삭제</a>
         </div>
       </div>
     </section>
   </main>
 </body>
 
- <%@ include file="./_footer.jsp" %>
-
+<%@ include file="./_footer.jsp" %>
