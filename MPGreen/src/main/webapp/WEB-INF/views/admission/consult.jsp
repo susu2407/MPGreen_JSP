@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/admission/_header.jsp" %>
   
   <main>
@@ -8,7 +9,7 @@
             <img src="../images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">입학안내</a>
             <img src="../images/bg-path-arrow.png" alt="next">
-            <a href="#" class="sidebar-text">입학상담</a>
+            <a href="${pageContext.request.contextPath}/adimssion/consult.do" class="sidebar-text">입학상담</a>
         </div>
     </div>
 
@@ -113,8 +114,8 @@
                             </a>
                         </div>
                     </div>
-                    <div>
-                        <button class="ask">문의하기</button>
+                    <div class="btn-box">
+                        <a href="${pageContext.request.contextPath}/admission/consult_write.do" class="ask">문의하기</a>
                     </div>
                 </div>
             </div>

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="/css/common/header.css">
-    <link rel="stylesheet" href="/css/common/layout.css">
-    <link rel="stylesheet" href="/css/member/signup.css">
-    <link rel="stylesheet" href="/css/common/footer.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/header.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/layout.css">
+    <link rel="stylesheet" href="/MPGreen/css/member/signup.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
             <!-- .container가 로고와 메뉴를 1200px 중앙에 배치 -->
             <div class="container">
                 <a href="/" class="logo">
-                    <img src="/images/header_logo.png" alt="그린대학교">
+                    <img src="/MPGreen/images/header_logo.png" alt="그린대학교">
                 </a>
                 <nav class="main-nav">
                     <ul>
@@ -82,10 +82,10 @@
         <!-- ===== 상단바 ===== -->
         <div class="top-bar">
             <div class="top-bar-content">
-                <img src="../images/ico-home.png" alt="홈">
-                <img src="../images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">대학소개</a>
-                <img src="../images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
@@ -161,49 +161,4 @@
             </div>
         </div>
     </main>
-
-    <footer>
-        <div>
-        <div class="container bottom">
-            <p>
-            <ul class="terms">
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">통합정보시스템</a></li>
-                <li><a href="#">학사일정</a></li>
-                <li><a href="#">주요민원 연럭처</a></li>
-                <li><a href="#">교내공지사항</a></li>
-            </ul>
-            </p>
-        </div>
-        </div>
-        <div>
-        <div class="footer-inner">
-            <div class="footer-logo">
-            <img src="/images/footer_logo.png" alt="그린대학교" class="icon">
-            </div>
-            <div class="info">
-            <p>
-                그린대학교<br>
-                [12345] 부산광역시 부산진구 부전대로 123 그린대학교<br>
-                대표전화 : 051-123-1000 / 입학안내 : 051-123-1302 / FAX : 051-123-3333<br><br>
-                CopyrightⓒGreen University All rights reserved.
-            </p>
-            </div>
-            <div class="footer-tools">
-            <form action="#" method="get">
-                <select name="site" class="site-select" aria-label="주요사이트">
-                <option selected>주요사이트</option>
-                <option value="introduce">대학소개</option>
-                <option value="admission">입학안내</option>
-                <option value="graduate">대학.대학원</option>
-                <option value="Academic">학사안내</option>
-                <option value="campuslife">대학생활</option>
-                <option value="community">커뮤니티</option>
-                </select>
-            </form>
-            </div>
-        </div>
-        </div>
-    </footer>
-</body>
-</html>
+<%@ include file="/WEB-INF/views/common/_footer.jsp" %>

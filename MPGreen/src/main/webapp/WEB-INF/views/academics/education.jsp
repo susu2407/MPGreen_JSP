@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/academics/_header.jsp" %>
 
   <main>
@@ -9,7 +10,7 @@
             <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">대학·대학원</a>
 			<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academics/education.html" class="sidebar-text">사범대학</a>
+            <a href="${pageContext.request.contextPath}/academics/education.do" class="sidebar-text">사범대학</a>
         </div>
     </div>
 
@@ -69,13 +70,14 @@
                                         <th>비고</th>
                                     </tr>
                                 </thead>
+                                <!--  <c:forEach var="academics" items="${dtoList}"> -->
                                 <tbody>
                                     <tr>
-                                        <td>국어교육과
+                                        <td>국어교육과<!-- ${academics.dep_name} -->
                                             <a href="#"><img src="/MPGreen/images/ico_link.png"></a>
                                         </td>
-                                        <td>김국어</td>
-                                        <td>051-123-4001</td>
+                                        <td>김국어<!-- ${academics.dean} --></td>
+                                        <td>051-123-4001<!-- ${academics.dep_tel} --></td>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>

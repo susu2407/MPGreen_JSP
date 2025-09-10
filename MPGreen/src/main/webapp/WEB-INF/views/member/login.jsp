@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="/css/common/header.css">
-    <link rel="stylesheet" href="/css/common/layout.css">
-    <link rel="stylesheet" href="/css/member/login.css">
-    <link rel="stylesheet" href="/css/common/footer.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/header.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/layout.css">
+    <link rel="stylesheet" href="/MPGreen/css/member/login.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
             <!-- .container가 로고와 메뉴를 1200px 중앙에 배치 -->
             <div class="container">
                 <a href="/" class="logo">
-                    <img src="/images/header_logo.png" alt="그린대학교">
+                    <img src="/MPGreen/images/header_logo.png" alt="그린대학교">
                 </a>
                 <nav class="main-nav">
                     <ul>
@@ -82,10 +82,10 @@
         <!-- ===== 상단바 ===== -->
         <div class="top-bar">
             <div class="top-bar-content">
-                <img src="../images/ico-home.png" alt="홈">
-                <img src="../images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/ico-home.png" alt="홈">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">대학소개</a>
-                <img src="../images/bg-path-arrow.png" alt="next">
+                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
@@ -138,3 +138,4 @@
             </div>
         </div>
     </main>
+    <%@ include file="/WEB-INF/views/common/_footer.jsp" %>

@@ -2,47 +2,47 @@ package greendae.user.dto.academics;
 
 public class AcademicsDTO {
 	
-	private String dep_name;
-	private String pro_name;
-	private String dep_no;
-	private String remark;
+	private String department_name;
+	private String dean;
+	private String contact_phone;
+//	private String remark;
 	
-	public String getDep_name() {
-		return dep_name;
+	public String getDepartment_name() {
+		return department_name;
 	}
 	
-	public void setDep_name(String dep_name) {
-		this.dep_name = dep_name;
+	public void setDepartment_name(String department_name) {
+		this.department_name = department_name;
 	}
 	
-	public String getPro_name() {
-		return pro_name;
+	public String getDean() {
+		return dean;
 	}
 	
-	public void setPro_name(String pro_name) {
-		this.pro_name = pro_name;
+	public void setDean(String dean) {
+		this.dean = dean;
 	}
 	
-	public String getDep_no() {
-		return dep_no;
+	public String getContact_phone() {
+		return contact_phone;
 	}
 	
-	public void setDep_no(String dep_no) {
-		this.dep_no = dep_no;
+	public void setContact_phone(String contact_phone) {
+		this.contact_phone = contact_phone;
 	}
 	
-	public String getRemark() {
+	/*public String getRemark() {
 		return remark;
 	}
 	
 	public void setRemark(String remark) {
 		this.remark = remark;
-	}
+	}*/
 	
 	@Override
 	public String toString() {
-		return "AcademicsDTO [dep_name=" + dep_name + ", pro_name=" + pro_name + ", dep_no=" + dep_no + ", remark=" + remark
-				+ "]";
+		return "AcademicsDTO [department_name=" + department_name + ", dean=" + dean + ", contact_phone=" + contact_phone + /*", remark=" + remark
+				+*/ "]";
 	}
 	
 	

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/academic/_header.jsp" %>
 
   <main>
@@ -9,34 +10,34 @@
             <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
             <a href="#" class="sidebar-text">학사안내</a>
             <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
-            <a href="/academic/notice.html" class="sidebar-text">공지사항   </a>
+            <a href="${pageContext.request.contextPath}/academic/notice.do" class="sidebar-text">공지사항   </a>
         </div>
     </div>
 
     <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
-                <h2 class="sbTitle">학사안내</h2> <!--사이드바 제목-->
+                <h2 class="sbTitle">입학안내</h2> <!--사이드바 제목-->
             </div>
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="/academic/notice.html" class="itemText">공지사항</a>
+                        <a href="${pageContext.request.contextPath}/academic/notice.do" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/schedule.html" class="itemText">학사일정</a>
+                        <a href="${pageContext.request.contextPath}/academic/schedule.do" class="itemText">학사일정</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/enroll.html" class="itemText">수강신청</a>
+                        <a href="${pageContext.request.contextPath}/academic/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/grade.html" class="itemText">성적</a>
+                        <a href="${pageContext.request.contextPath}/academic/grade.do" class="itemText">성적</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/graduation.html" class="itemText">수료 및 졸업</a>
+                        <a href="${pageContext.request.contextPath}/academic/graduation.do" class="itemText">수료 및 졸업</a>
                     </li>
                     <li class="item">
-                        <a href="/academic/faq.html" class="itemText">자주하는질문</a>
+                        <a href="${pageContext.request.contextPath}/academic/faq.do" class="itemText">자주 묻는 질문</a>
                     </li>
                 </ul>
             </div>
@@ -117,4 +118,4 @@
             </div>
     </section>
   </main>
-<%@ include file="/WEB-INF/views/admission/_footer.jsp" %>
+<%@ include file="/WEB-INF/views/academic/_footer.jsp" %>

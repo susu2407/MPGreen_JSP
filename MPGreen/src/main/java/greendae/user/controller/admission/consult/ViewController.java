@@ -1,4 +1,4 @@
-package greendae.user.controller.academic.schedule;
+package greendae.user.controller.admission.consult;
 
 import java.io.IOException;
 
@@ -9,21 +9,21 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/academic/schedule.do")
-public class SchduledController extends HttpServlet {
+@WebServlet("/admission/consult_view.do")
+public class ViewController extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/academic/schedule.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/admission/consult_view.jsp");
 		dispatcher.forward(req, resp);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
 	}
+
 
 }
