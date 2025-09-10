@@ -8,9 +8,9 @@ public enum AcademicsService {
 
 	INSTANCE;
 	
-	private AcademicsDAO dao = AcademicsDAO.getInstance();
-	
-	public List<AcademicsDAO> findAll() {
-		return dao.selectAll();
-	}
+//	private AcademicsDAO dao = AcademicsDAO.getInstance();
+//	
+//	public List<AcademicsDAO> findAll() {
+//		return dao.selectAll();
+//	}
 }

@@ -71,7 +71,7 @@
                         <a class="dropbtn" href="#">학사안내</a>
                         <ul class="dropdown-content">
                             <li><a href="${pageContext.request.contextPath}/academic/notice.do">공지사항</a></li>
-                            <li><a href="${pageContext.request.contextPath}/academic/curriculum.do">학사일정</a></li>
+                            <li><a href="${pageContext.request.contextPath}/academic/schedule.do">학사일정</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/enroll.do">수강신청</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/grade.do">성적</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/graduation.do">수료 및 졸업</a></li>

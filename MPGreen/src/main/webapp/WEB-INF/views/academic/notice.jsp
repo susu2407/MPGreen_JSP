@@ -22,19 +22,22 @@
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
                     <li class="item"> <!--사이드바 리스트 요소-->
-                        <a href="${pageContext.request.contextPath}/adimssion/notice.do" class="itemText">공지사항</a>
+                        <a href="${pageContext.request.contextPath}/academic/notice.do" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/early.do" class="itemText">수시모집</a>
+                        <a href="${pageContext.request.contextPath}/academic/schedule.do" class="itemText">학사일정</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/regular.do" class="itemText">정시모집</a>
+                        <a href="${pageContext.request.contextPath}/academic/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/transfer.do" class="itemText">편입학</a>
+                        <a href="${pageContext.request.contextPath}/academic/grade.do" class="itemText">성적</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/consult.do" class="itemText">입학상담</a>
+                        <a href="${pageContext.request.contextPath}/academic/graduation.do" class="itemText">수료 및 졸업</a>
+                    </li>
+                    <li class="item">
+                        <a href="${pageContext.request.contextPath}/academic/faq.do" class="itemText">자주 묻는 질문</a>
                     </li>
                 </ul>
             </div>
@@ -115,4 +118,4 @@
             </div>
     </section>
   </main>
-<%@ include file="/WEB-INF/views/admission/_footer.jsp" %>
+<%@ include file="/WEB-INF/views/academic/_footer.jsp" %>

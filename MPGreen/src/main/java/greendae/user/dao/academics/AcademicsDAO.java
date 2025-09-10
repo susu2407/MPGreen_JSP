@@ -16,14 +16,14 @@ public class AcademicsDAO extends DBHelper{
 
 		try {
 			conn = getConnection();
-			psmt = conn.prepareStatement(null // SELECT DEPARTMENT_NAME, DEAN, CONTACT_PHONE FROM DEPARTMENT;);	
+			psmt = conn.prepareStatement(null); // SELECT DEPARTMENT_NAME, DEAN, CONTACT_PHONE FROM DEPARTMENT;);	
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
 				AcademicsDTO dto = new AcademicsDTO();
-				dto.setDep_name(rs.getString(3));
-				dto.setDean(rs.getString(7));
-				dto.setDep_tel(rs.getString(8));
+				dto.setDepartment_name(rs.getString(1));
+				dto.setDean(rs.getString(2));
+				dto.setContact_phone(rs.getString(3));
 //				dto.setRemark(rs.getString(4));
 				dtoList.add(dto);
 			}

@@ -2,17 +2,17 @@ package greendae.user.dto.academics;
 
 public class AcademicsDTO {
 	
-	private String dep_name;
+	private String department_name;
 	private String dean;
-	private String dep_tel;
+	private String contact_phone;
 //	private String remark;
 	
-	public String getDep_name() {
-		return dep_name;
+	public String getDepartment_name() {
+		return department_name;
 	}
 	
-	public void setDep_name(String dep_name) {
-		this.dep_name = dep_name;
+	public void setDepartment_name(String department_name) {
+		this.department_name = department_name;
 	}
 	
 	public String getDean() {
@@ -23,12 +23,12 @@ public class AcademicsDTO {
 		this.dean = dean;
 	}
 	
-	public String getDep_tel() {
-		return dep_tel;
+	public String getContact_phone() {
+		return contact_phone;
 	}
 	
-	public void setDep_tel(String dep_tel) {
-		this.dep_tel = dep_tel;
+	public void setContact_phone(String contact_phone) {
+		this.contact_phone = contact_phone;
 	}
 	
 	/*public String getRemark() {
@@ -41,7 +41,7 @@ public class AcademicsDTO {
 	
 	@Override
 	public String toString() {
-		return "AcademicsDTO [dep_name=" + dep_name + ", dean=" + dean + ", dep_tel=" + dep_tel + /*", remark=" + remark
+		return "AcademicsDTO [department_name=" + department_name + ", dean=" + dean + ", contact_phone=" + contact_phone + /*", remark=" + remark
 				+*/ "]";
 	}
 	
