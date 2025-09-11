@@ -1,4 +1,4 @@
-package greendae.user.controller.student.grade_view;
+package greendae.user.controller.community.data;
 
 import java.io.IOException;
 
@@ -9,20 +9,25 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/student/grade_view.do")
-public class ListController extends HttpServlet{
+@WebServlet("/community/data_view.do")
+public class ViewController extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/student/grade-view.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/community/data_view.jsp");
 		dispatcher.forward(req, resp);
+		
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	}
 
+	}
 }
+
+
+
+

@@ -2,7 +2,12 @@ package greendae.util;
 
 public class Sql_p {
 
-	public final static String SELECT_ALL_ACADEMICS = "SELECT department_name, dean, contact_phone FROM department where college = '인문사회대학'";
+	public final static String SELECT_ALL_ACADEMICS =
+		    "SELECT department_name, MIN(dean) AS dean, MIN(contact_phone) AS contact_phone " +
+		    "FROM department " +
+		    "WHERE college = '사범대학' " +
+		    "GROUP BY department_name";
+
 	
 	public final static String SELECT_ALL_CURRICULUM_MAJOR = "select grade, course_code, "
 		 											+"'공통' as completion_group, "

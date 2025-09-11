@@ -15,7 +15,6 @@
 </div>
 
     <section id="container">
-    <section id="container">
       <!-- 좌측 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">

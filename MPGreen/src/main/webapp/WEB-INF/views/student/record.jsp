@@ -25,13 +25,13 @@
                         <a href="${pageContext.request.contextPath}/student/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/student/enroll-list.do" class="itemText">수강신청내역</a>
+                        <a href="${pageContext.request.contextPath}/student/enroll_list.do" class="itemText">수강신청내역</a>
                     </li>
                     <li class="item">
                         <a href="${pageContext.request.contextPath}/student/curriculum.do" class="itemText">교과과정</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/student/grade-view.do" class="itemText">성적조회</a>
+                        <a href="${pageContext.request.contextPath}/student/grade_view.do" class="itemText">성적조회</a>
                     </li>
                     <li class="item">
                         <a href="${pageContext.request.contextPath}/student/record.do" class="itemText">학적</a>
