@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
 
-<body class="page-community view-page">
+<body class="page-community jobs-delete">
   <main>
     <!-- 상단 경로 -->
     <div class="top-bar">
@@ -10,9 +10,9 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">커뮤니티</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/list.do?category=jobs" class="sidebar-text">취업정보</a>
+        <a href="${pageContext.request.contextPath}/community/jobs.do" class="sidebar-text">취업정보</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="#" class="sidebar-text">채용공고 보기</a>
+        <a href="${pageContext.request.contextPath}/community/jobs_delete.do?boardId=${board.boardId}" class="sidebar-text">글삭제</a>
       </div>
     </div>
 
@@ -34,47 +34,23 @@
         </div>
       </div>
 
-      <!-- 본문 상세보기 -->
-      <div class="view-wrap">
-        <h2 class="view-title">${board.title}</h2>
-
-        <div class="view-content">
-          <table class="view-table">
-            <tr>
-              <th>상태</th>
-              <td>
-                <c:choose>
-                  <c:when test="${board.qnaStatus eq 'open'}">
-                    <span class="badge type-open">모집중</span>
-                  </c:when>
-                  <c:otherwise>
-                    <span class="badge type-closed">마감</span>
-                  </c:otherwise>
-                </c:choose>
-              </td>
-            </tr>
-            <tr>
-              <th>업체명</th>
-              <td>${board.writerName}</td>
-            </tr>
-            <tr>
-              <th>채용정보</th>
-              <td>
-                ${board.content}
-              </td>
-            </tr>
-            <tr>
-              <th>마감일자</th>
-              <td>${board.updated_at}</td>
-            </tr>
-          </table>
+      <!-- 본문 삭제 확인 -->
+      <div class="board">
+        <div class="boardUpper">
+          <h3 class="buText">취업정보 삭제</h3>
         </div>
 
-        <!-- 하단 버튼 -->
-        <div class="view-actions">
-          <a href="${pageContext.request.contextPath}/community/list.do?category=jobs" class="btn">목록</a>
-          <a href="${pageContext.request.contextPath}/community/edit.do?category=jobs&boardId=${board.boardId}" class="btn primary">수정</a>
-          <a href="${pageContext.request.contextPath}/community/delete.do?category=jobs&boardId=${board.boardId}" class="btn danger">삭제</a>
+        <div class="notice-wrap">
+			<form action="${pageContext.request.contextPath}/community/delete.do" method="post">
+			  <input type="hidden" name="category" value="jobs">
+			  <input type="hidden" name="boardId" value="${board.boardId}" />
+			  <p>정말로 이 글을 삭제하시겠습니까?</p>
+			  <div class="form-actions">
+			    <button type="submit" class="btn-danger">네</button>
+			    <a href="${pageContext.request.contextPath}/community/view.do?category=free&boardId=${board.boardId}" class="btn-cancel">아니요</a>
+			  </div>
+			</form>
+
         </div>
       </div>
     </section>

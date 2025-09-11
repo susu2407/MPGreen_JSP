@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
 
-<body class="page-community jobs-write">
+<body class="page-community jobs-edit">
   <main>
     <!-- 상단 경로 -->
     <div class="top-bar">
@@ -12,7 +12,7 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="${pageContext.request.contextPath}/community/list.do?category=jobs" class="sidebar-text">취업정보</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/write.do?category=jobs" class="sidebar-text">글쓰기</a>
+        <a href="${pageContext.request.contextPath}/community/edit.do?category=jobs&boardId=${board.boardId}" class="sidebar-text">글수정</a>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=notice">공지사항</a></li>
             <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
             <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs" style="color:#fff">취업정보</a></li>
             <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
@@ -34,43 +34,42 @@
         </div>
       </div>
 
-      <!-- 글쓰기 폼 -->
+      <!-- 본문 수정 -->
       <div class="board">
         <div class="boardUpper">
-          <h3 class="buText">취업정보</h3>
+          <h3 class="buText">취업정보 수정</h3>
         </div>
 
         <div class="notice-wrap">
-          <!-- category=jobs 를 같이 넘겨야 함 -->
-          <form class="write-form" 
-                action="${pageContext.request.contextPath}/community/write.do?category=jobs" 
-                method="post">
+          <form class="edit-form" action="${pageContext.request.contextPath}/community/edit.do?category=jobs" method="post">
+            <input type="hidden" name="boardId" value="${board.boardId}" />
 
             <div class="form-row">
               <label for="status">상태</label>
-              <select id="status" name="qnaStatus" required>
-                <option value="open">모집중</option>
-                <option value="closed">마감</option>
+              <select id="status" name="status" required>
+                <option value="open" ${board.status == 'open' ? 'selected' : ''}>모집중</option>
+                <option value="closed" ${board.status == 'closed' ? 'selected' : ''}>마감</option>
               </select>
             </div>
-				<div class="form-row">
-				  <label for="title">업체명</label>
-				  <input type="text" id="title" name="title" required>
-				</div>
 
             <div class="form-row">
-              <label for="content">채용 상세</label>
-              <textarea id="content" name="content" rows="6" required></textarea>
+              <label for="company">업체명</label>
+              <input type="text" id="company" name="company" value="${board.company}" required>
+            </div>
+
+            <div class="form-row">
+              <label for="title">채용정보</label>
+              <textarea id="title" name="title" rows="5" required>${board.title}</textarea>
             </div>
 
             <div class="form-row">
               <label for="deadline">마감일자</label>
-              <input type="date" id="deadline" name="updated_at" required>
+              <input type="text" id="deadline" name="deadline" value="${board.deadline}" required>
             </div>
 
             <div class="form-actions">
-              <button type="submit" class="btn-submit">등록</button>
-              <a href="${pageContext.request.contextPath}/community/list.do?category=jobs" class="btn-cancel">취소</a>
+              <button type="submit" class="btn-submit">수정 완료</button>
+              <a href="${pageContext.request.contextPath}/community/view.do?category=jobs&boardId=${board.boardId}" class="btn-cancel">취소</a>
             </div>
           </form>
         </div>
@@ -78,3 +77,5 @@
     </section>
   </main>
 </body>
+
+<%@ include file="./_footer.jsp" %>

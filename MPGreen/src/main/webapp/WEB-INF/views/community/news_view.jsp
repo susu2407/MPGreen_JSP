@@ -10,7 +10,7 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">커뮤니티</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/news.do" class="sidebar-text">뉴스 및 칼럼</a>
+        <a href="${pageContext.request.contextPath}/community/list.do?category=news" class="sidebar-text">뉴스 및 칼럼</a>
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">게시글 보기</a>
       </div>
@@ -25,44 +25,48 @@
         <div class="sidebarMenu">
           <ul class="list">
             <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
-            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do" style="color:#fff">뉴스 및 칼럼</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do">자유게시판</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news" style="color:#fff">뉴스 및 칼럼</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=qna">질문과 답변</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=data">자료실</a></li>
           </ul>
         </div>
       </div>
 
-
       <div class="view-wrap">
-		<div class="view-header">
+        <div class="view-header">
+          <!-- 뉴스/칼럼 뱃지 -->
+          <c:choose>
+            <c:when test="${board.newsType eq 'news'}">
+              <span class="badge type-news">뉴스</span>
+            </c:when>
+            <c:otherwise>
+              <span class="badge type-column">칼럼</span>
+            </c:otherwise>
+          </c:choose>
 
-		  <span class="badge type-news">뉴스</span>
-
-		 
-		  <h2 class="view-title">그린대, 2024년 2학기 늘푸른관 신축 완료</h2>
-		  <div class="view-meta">
-		    <span>작성자: 홍보실</span>
-		    <span>작성일: 2024.04.09</span>
-		    <span>조회수: 160</span>
-		  </div>
-		</div>
+          <!-- 제목 -->
+          <h2 class="view-title">${board.title}</h2>
+          <div class="view-meta">
+            <span>작성자: ${board.writerName}</span>
+            <span>작성일: ${board.created_at}</span>
+            <span>조회수: ${board.viewCount}</span>
+          </div>
+        </div>
 
         <div class="view-content">
-          <p>
-            본문 내용이 여기에 표시됩니다.<br>
-            뉴스나 칼럼의 상세 기사 형식으로 출력됩니다.<br>
-            이미지나 표 등이 포함될 수 있습니다.
-          </p>
+          <p>${board.content}</p>
         </div>
 
-        <div class="view-file">
-          <strong>첨부파일:</strong> 
-          <a href="#">green_univ_news.pdf</a>
-        </div>
+        <c:if test="${not empty board.fileName}">
+          <div class="view-file">
+            <strong>첨부파일:</strong>
+            <a href="${pageContext.request.contextPath}/upload/${board.fileName}" download>${board.fileName}</a>
+          </div>
+        </c:if>
 
-        <!-- 댓글 영역 -->
+        <!-- 댓글 영역 (임시, 추후 별도 DTO 필요) -->
         <div class="comment-section">
           <h4>댓글</h4>
           <ul class="comment-list">
@@ -80,6 +84,7 @@
 
         <div class="comment-form">
           <form action="${pageContext.request.contextPath}/community/commentWrite.do" method="post">
+            <input type="hidden" name="boardId" value="${board.boardId}">
             <input type="text" name="writer" placeholder="작성자" required>
             <textarea name="content" rows="3" placeholder="댓글을 입력하세요" required></textarea>
             <button type="submit" class="btn-submit">댓글 등록</button>
@@ -87,9 +92,9 @@
         </div>
 
         <div class="view-actions">
-          <a href="${pageContext.request.contextPath}/community/news.do" class="btn">목록</a>
-          <a href="${pageContext.request.contextPath}/community/news_edit.do" class="btn primary">수정</a>
-          <a href="${pageContext.request.contextPath}/community/news_delete.do" class="btn danger">삭제</a>
+          <a href="${pageContext.request.contextPath}/community/list.do?category=news" class="btn">목록</a>
+          <a href="${pageContext.request.contextPath}/community/edit.do?category=news&boardId=${board.boardId}" class="btn primary">수정</a>
+          <a href="${pageContext.request.contextPath}/community/delete.do?category=news&boardId=${board.boardId}" class="btn danger">삭제</a>
         </div>
       </div>
     </section>
