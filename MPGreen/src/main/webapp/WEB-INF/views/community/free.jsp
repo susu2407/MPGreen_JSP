@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="./_header.jsp" %>
 <body class="page-community">
   <main>
@@ -9,7 +10,7 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">커뮤니티</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="#" class="sidebar-text">자유게시판</a>
+        <a href="${pageContext.request.contextPath}/community/list.do?category=free" class="sidebar-text">자유게시판</a>
       </div>
     </div>
 
@@ -21,17 +22,15 @@
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-  			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-			<li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do"  style="color:#fff">자유게시판</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
-
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free" style="color:#fff">자유게시판</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=qna">질문과 답변</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=data">자료실</a></li>
           </ul>
         </div>
       </div>
-
 
       <div class="board">
         <div class="boardUpper">
@@ -39,8 +38,9 @@
         </div>
 
         <div class="notice-wrap">
-
-          <form class="notice-toolbar" action="#" method="get">
+          <!-- 검색폼 -->
+          <form class="notice-toolbar" action="${pageContext.request.contextPath}/community/list.do" method="get">
+            <input type="hidden" name="category" value="free"/>
             <select class="notice-field" name="field" aria-label="검색 대상 선택">
               <option value="all">전체</option>
               <option value="title">제목</option>
@@ -50,7 +50,7 @@
             <button type="submit" class="notice-btn">검색</button>
           </form>
 
-
+          <!-- 글 목록 -->
           <table class="notice-table">
             <colgroup>
               <col class="col-no">
@@ -59,74 +59,64 @@
               <col class="col-date">
               <col class="col-views">
             </colgroup>
-            <thead>
-              <tr>
-                <th class="col-no">번호</th>
-                <th class="col-title">제목</th>
-                <th class="col-writer">작성자</th>
-                <th class="col-date">작성일</th>
-                <th class="col-views">조회</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="col-no">3</td>
-                <td class="col-title">
-                  2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모바일 쿠폰 증정)
-                </td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
-                <td>160</td>
-              </tr>
-              <tr>
-                <td class="col-no">2</td>
-                <td class="col-title">
-                  2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모바일 쿠폰 증정)
-                </td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
-                <td>160</td>
-              </tr>
-              <tr>
-                <td class="col-no">1</td>
-                <td class="col-title">
-                  2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모바일 쿠폰 증정)
-                </td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
-                <td>160</td>
-              </tr>
-            </tbody>
+				 <thead>
+				  <tr>
+				    <th class="col-no">번호</th>
+				    <!-- 제목 헤더 가운데 -->
+				    <th class="col-title" style="text-align:center;">제목</th>
+				    <th class="col-writer">작성자</th>
+				    <th class="col-date">작성일</th>
+				    <th class="col-views">조회</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <c:forEach var="board" items="${dtoList}" varStatus="status">
+				    <tr>
+				      <td class="col-no">${pagenationDTO.currentPageStartNum - status.index}</td>
+				      <!-- 제목 본문 가운데 -->
+				      <td class="col-title" style="text-align:center;">
+				        <a href="${pageContext.request.contextPath}/community/view.do?category=free&boardId=${board.boardId}">
+				          ${board.title}
+				        </a>
+				      </td>
+				      <td>${board.writerName}</td>
+				      <td>${board.created_at}</td>
+				      <td>${board.viewCount}</td>
+				    </tr>
+				  </c:forEach>
+				</tbody>
+            
           </table>
 
-				<div class="page">
-			    <div class="prev">
-			        <a href="#" class="paging">
-			            <img src="../images/btn-first-page.png">
-			        </a>
-			        <a href="#" class="paging">
-			            <img src="../images/btn-prev-page.png">
-			        </a>
-			    </div>
-			    <div class="pagenumber">
-			        <a href="#" class="active">1</a>
-			        <a href="#">2</a>
-			        <a href="#">3</a>
-			    </div>
-			    <div class="last">
-			        <a href="#" class="paging">
-			            <img src="../images/btn-next-page.png">
-			        </a>
-			        <a href="#" class="paging">
-			            <img src="../images/btn-last-page.png">
-			        </a>
-			    </div>
-			</div>
-	              <a href="${pageContext.request.contextPath}/community/free_write.do" class="btn-write">글쓰기</a>
-	          </div>
-	        </div>
-	    </section>
+          <!-- 페이징 -->
+          <div class="page">
+            <c:if test="${pagenationDTO.pageGroupStart > 1}">
+              <a href="${pageContext.request.contextPath}/community/list.do?category=free&pg=${pagenationDTO.pageGroupStart-1}" class="paging">
+                <img src="../images/btn-prev-page.png">
+              </a>
+            </c:if>
+
+            <div class="pagenumber">
+              <c:forEach var="num" begin="${pagenationDTO.pageGroupStart}" end="${pagenationDTO.pageGroupEnd}">
+                <a href="${pageContext.request.contextPath}/community/list.do?category=free&pg=${num}" class="${pagenationDTO.currentPage == num ? 'active' : ''}">
+                  ${num}
+                </a>
+              </c:forEach>
+            </div>
+
+            <c:if test="${pagenationDTO.pageGroupEnd < pagenationDTO.lastPageNum}">
+              <a href="${pageContext.request.contextPath}/community/list.do?category=free&pg=${pagenationDTO.pageGroupEnd+1}" class="paging">
+                <img src="../images/btn-next-page.png">
+              </a>
+            </c:if>
+          </div>
+
+          <!-- 글쓰기 버튼 -->
+          <a href="${pageContext.request.contextPath}/community/write.do?category=free" class="btn-write">글쓰기</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <%@ include file="./_footer.jsp" %>
-   </body>
+</body>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="./_header.jsp" %>
 <body class="page-community">
   <main>
@@ -9,47 +10,48 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">커뮤니티</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="#" class="sidebar-text">자료실</a>
+        <a href="${pageContext.request.contextPath}/community/list.do?category=data" class="sidebar-text">자료실</a>
       </div>
     </div>
 
     <section id="container">
 
+      <!-- 사이드바 -->
       <div class="sidebar">
         <div class="sidebarHeader">
           <h2 class="sbTitle">커뮤니티</h2>
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-			<li class="item "><a class="itemText" href="${pageContext.request.contextPath}/community/free.do" >자유게시판</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-			<li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do" style="color:#fff">자료실</a></li>
-
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=qna">질문과 답변</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=data" style="color:#fff">자료실</a></li>
           </ul>
         </div>
       </div>
 
-
+      <!-- 본문 -->
       <div class="board">
         <div class="boardUpper">
           <h3 class="buText">자료실</h3>
         </div>
 
         <div class="notice-wrap">
-
-          <form class="notice-toolbar" action="#" method="get">
+          <!-- 검색 -->
+          <form class="notice-toolbar" action="${pageContext.request.contextPath}/community/list.do" method="get">
+            <input type="hidden" name="category" value="data" />
             <select class="notice-field" name="field" aria-label="검색 대상 선택">
-              <option value="title">제목</option>
+              <option value="title" style="text-align:center;" >제목</option>
               <option value="writer">작성자</option>
             </select>
-            <input class="notice-input" type="text" name="q" placeholder="검색어를 입력해 주세요" />
+            <input class="notice-input" type="text" name="q" placeholder="검색어를 입력해 주세요" value="${param.q}" />
             <button type="submit" class="notice-btn">검색</button>
           </form>
 
-
+          <!-- 글 목록 -->
           <table class="notice-table">
             <colgroup>
               <col class="col-no">
@@ -58,83 +60,62 @@
               <col class="col-date">
               <col class="col-views">
             </colgroup>
-            <thead>
-              <tr>
-                <th class="col-no">번호</th>
-                <th class="col-title">제목</th>
-                <th class="col-writer">작성자</th>
-                <th class="col-date">작성일</th>
-                <th class="col-views">조회수</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="col-no">3</td>
-                <td class="col-title">
-                  <div class="title-wrap">
-                    <img src="../images/ico-file01.png" alt="첨부파일" class="badge-file">
-                    교원자격증 재교부 및 기재사항 정정신청 안내(서식)
-                  </div>
-                </td>
-                <td>학사관리과</td>
-                <td>24.04.09</td>
-                <td>120</td>
-              </tr>
-              <tr>
-                <td class="col-no">2</td>
-                <td class="col-title">
-                  <div class="title-wrap">
-                    <img src="../images/ico-file01.png" alt="첨부파일" class="badge-file">
-                    2025 융합인재학부 오리엔테이션 자료
-                  </div>
-                </td>
-                <td>융합인재학부</td>
-                <td>24.04.09</td>
-                <td>120</td>
-              </tr>
-              <tr>
-                <td class="col-no">1</td>
-                <td class="col-title">
-                  <div class="title-wrap">
-                    <img src="../images/ico-file01.png" alt="첨부파일" class="badge-file">
-                    2022년 2월 8일 면접 전략 특강 강의 자료
-                  </div>
-                </td>
-                <td>취업지원실</td>
-                <td>24.04.09</td>
-                <td>120</td>
-              </tr>
-            </tbody>
+				<thead>
+				  <tr>
+				    <th class="col-no">번호</th>
+				    <!-- 제목 헤더 가운데 -->
+				    <th class="col-title" style="text-align:center;">제목</th>
+				    <th class="col-writer">작성자</th>
+				    <th class="col-date">작성일</th>
+				    <th class="col-views">조회수</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <c:forEach var="board" items="${dtoList}" varStatus="status">
+				    <tr>
+				      <td class="col-no">${pagenationDTO.currentPageStartNum - status.index}</td>
+				      <!-- 제목 본문 가운데 -->
+				      <td class="col-title" style="text-align:center;">
+				        <div class="title-wrap" style="display:inline-block; text-align:center; width:100%;">
+				          <a href="${pageContext.request.contextPath}/community/view.do?category=data&boardId=${board.boardId}">
+				            ${board.title}
+				          </a>
+				        </div>
+				      </td>
+				      <td>${board.writerName}</td>
+				      <td>${board.created_at}</td>
+				      <td>${board.viewCount}</td>
+				    </tr>
+				  </c:forEach>
+				</tbody>
+
           </table>
 
-				<div class="page">
-			    <div class="prev">
-			        <a href="#" class="paging">
-			            <img src="../images/btn-first-page.png">
-			        </a>
-			        <a href="#" class="paging">
-			            <img src="../images/btn-prev-page.png">
-			        </a>
-			    </div>
-			    <div class="pagenumber">
-			        <a href="#" class="active">1</a>
-			        <a href="#">2</a>
-			        <a href="#">3</a>
-			    </div>
-			    <div class="last">
-			        <a href="#" class="paging">
-			            <img src="../images/btn-next-page.png">
-			        </a>
-			        <a href="#" class="paging">
-			            <img src="../images/btn-last-page.png">
-			        </a>
-			    </div>
-			</div>
-	              <a href="${pageContext.request.contextPath}/community/data_write.do" class="btn-write">글쓰기</a>
-	          </div>
-	        </div>
+          <!-- 페이지네이션 -->
+          <div class="page">
+            <c:if test="${pagenationDTO.pageGroupStart > 1}">
+              <a href="${pageContext.request.contextPath}/community/list.do?category=data&pg=${pagenationDTO.pageGroupStart-1}" class="paging">
+                <img src="../images/btn-prev-page.png" alt="이전">
+              </a>
+            </c:if>
+            <div class="pagenumber">
+              <c:forEach var="num" begin="${pagenationDTO.pageGroupStart}" end="${pagenationDTO.pageGroupEnd}">
+                <a href="${pageContext.request.contextPath}/community/list.do?category=data&pg=${num}"
+                   class="${pagenationDTO.currentPage == num ? 'active' : ''}">${num}</a>
+              </c:forEach>
+            </div>
+            <c:if test="${pagenationDTO.pageGroupEnd < pagenationDTO.lastPageNum}">
+              <a href="${pageContext.request.contextPath}/community/list.do?category=data&pg=${pagenationDTO.pageGroupEnd+1}" class="paging">
+                <img src="../images/btn-next-page.png" alt="다음">
+              </a>
+            </c:if>
+          </div>
 
-	    </section>
+          <!-- 글쓰기 버튼 -->
+          <a href="${pageContext.request.contextPath}/community/write.do?category=data" class="btn-write">글쓰기</a>
+        </div>
+      </div>
+    </section>
   </main>
- <%@ include file="./_footer.jsp" %>
- </body>
+  <%@ include file="./_footer.jsp" %>
+</body>

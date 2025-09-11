@@ -1,5 +1,7 @@
 package greendae.user.dto.community;
 
+import java.util.List;
+
 public class CboardDTO {
     private int boardId;
     private String category;      // notice, news, jobs, free, qna, data
@@ -101,6 +103,22 @@ public class CboardDTO {
 	public void setAnswerContent(String answerContent) {
 		this.answerContent = answerContent;
 	}
+	
+	
+	// CboardDTO.java
+	private List<Cboard_commentDTO> comments;
+
+	public List<Cboard_commentDTO> getComments() {
+	    return comments;
+	}
+	public void setComments(List<Cboard_commentDTO> comments) {
+	    this.comments = comments;
+	}
+	
+	
+	private String fileName;
+	public String getFileName() { return fileName; }
+	public void setFileName(String fileName) { this.fileName = fileName; }
 	
 	@Override
 	public String toString() {

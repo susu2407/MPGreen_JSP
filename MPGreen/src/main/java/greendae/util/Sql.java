@@ -8,10 +8,13 @@ public class Sql {
 	
 	// ==================================================== cboard 전용 SQL======================= //
 
-    // 글 등록
-    public static final String INSERT_CBOARD =
-        "INSERT INTO cboard (category, title, content, writer_type, writer_id, created_at) " +
-        "VALUES (?, ?, ?, ?, ?, NOW())";
+	// 글 등록
+	public static final String INSERT_CBOARD =
+	    "INSERT INTO cboard " +
+	    "(category, title, content, writer_type, writer_id, news_type, is_secret, qna_status, answer_content, created_at, updated_at, view_count) " +
+	    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), 0)";
+
+
 
     // 글 목록 (카테고리별, 페이징)
     public static final String SELECT_CBOARD_BY_CATEGORY =

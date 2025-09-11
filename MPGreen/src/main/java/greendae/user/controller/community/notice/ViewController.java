@@ -1,8 +1,6 @@
 package greendae.user.controller.community.notice;
 
-
 import java.io.IOException;
-
 import greendae.user.dto.community.CboardDTO;
 import greendae.user.service.community.CboardService;
 import jakarta.servlet.RequestDispatcher;
@@ -22,11 +20,9 @@ public class ViewController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        // 1. URL에서 카테고리 추출 (/community/notice_view.do → notice)
-        String path = req.getServletPath(); 
-        String category = path.replace("/community/", "").replace("_view.do", ""); 
+        String path = req.getServletPath();
+        String category = path.replace("/community/", "").replace("_view.do", "");
 
-        // 2. boardId 파라미터 확인
         String boardIdParam = req.getParameter("boardId");
         if (boardIdParam == null) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "boardId is required");
@@ -41,14 +37,13 @@ public class ViewController extends HttpServlet {
             return;
         }
 
-        // 3. 서비스 호출 (조회수 증가 포함)
-        CboardDTO dto = service.findById(boardId);
+        // 조회수 증가 포함
+        CboardDTO dto = service.findByIdWithHit(boardId);
         if (dto == null) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Board not found");
             return;
         }
 
-        // 4. JSP 전달
         req.setAttribute("board", dto);
         req.setAttribute("category", category);
 

@@ -22,12 +22,12 @@
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-  			<li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do" style="color:#fff">공지사항</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do">자유게시판</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-			<li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do" style="color:#fff" >공지사항</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
+            <li class="item "><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=qna" >질문과 답변</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=data">자료실</a></li>
           </ul>
         </div>
       </div>
@@ -50,50 +50,53 @@
             <button type="submit" class="notice-btn">검색</button>
           </form>
 
-          <!-- 목록 테이블 -->
-          <table class="notice-table">
-            <colgroup>
-              <col class="col-no">
-              <col class="col-title">
-              <col class="col-writer">
-              <col class="col-date">
-              <col class="col-views">
-            </colgroup>
-            <thead>
-              <tr>
-                <th class="col-no">번호</th>
-                <th class="col-title">제목</th>
-                <th class="col-writer">작성자</th>
-                <th class="col-date">작성일</th>
-                <th class="col-views">조회</th>
-              </tr>
-            </thead>
-            <tbody>
-              <c:forEach var="board" items="${dtoList}" varStatus="status">
-                <tr>
-                  <td class="col-no">${pagenationDTO.currentPageStartNum - status.index}</td>
-					<td class="col-title">
-					  <div class="title-wrap">
-					    <a href="${pageContext.request.contextPath}/community/notice_view.do?boardId=${board.boardId}">
-					      ${board.title}
-					      <%-- 댓글 수는 나중에 DTO에 필드 추가하고 DAO에서 조회할 때 사용 --%>
-					      <%-- <c:if test="${board.commentCount > 0}">[${board.commentCount}]</c:if> --%>
-					    </a>
-					  </div>
-					</td>
-					<td>${board.writerId}</td> <!-- writerName 대신 -->
-					<td>${board.created_at}</td> <!-- createdAt → created_at -->
-					<td>${board.viewCount}</td>
-                </tr>
-              </c:forEach>
+			         <!-- 목록 테이블 -->
+			<table class="notice-table">
+			  <colgroup>
+			    <col class="col-no">
+			    <col class="col-title">
+			    <col class="col-writer">
+			    <col class="col-date">
+			    <col class="col-views">
+			  </colgroup>
+			  <thead>
+			    <tr>
+			      <th class="col-no">번호</th>
+			      <!-- 제목 헤더 가운데 -->
+			      <th class="col-title" style="text-align:center;">제목</th>
+			      <th class="col-writer">작성자</th>
+			      <th class="col-date">작성일</th>
+			      <th class="col-views">조회</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <c:forEach var="board" items="${dtoList}" varStatus="status">
+			      <tr>
+			        <td class="col-no">${pagenationDTO.currentPageStartNum - status.index}</td>
+			        <!-- 제목 본문도 가운데 -->
+			        <td class="col-title" style="text-align:center;">
+			          <div class="title-wrap">
+			            <a href="${pageContext.request.contextPath}/community/notice_view.do?boardId=${board.boardId}">
+			              ${board.title}
+			              <%-- 댓글 수는 나중에 DTO에 필드 추가하고 DAO에서 조회할 때 사용 --%>
+			              <%-- <c:if test="${board.commentCount > 0}">[${board.commentCount}]</c:if> --%>
+			            </a>
+			          </div>
+			        </td>
+			        <td>${board.writerId}</td> <!-- writerName 대신 -->
+			        <td>${board.created_at}</td> <!-- createdAt → created_at -->
+			        <td>${board.viewCount}</td>
+			      </tr>
+			    </c:forEach>
+			
+			    <c:if test="${empty dtoList}">
+			      <tr>
+			        <td colspan="5" style="text-align:center;">등록된 공지사항이 없습니다.</td>
+			      </tr>
+			    </c:if>
+			  </tbody>
+			</table>
 
-              <c:if test="${empty dtoList}">
-                <tr>
-                  <td colspan="5">등록된 공지사항이 없습니다.</td>
-                </tr>
-              </c:if>
-            </tbody>
-          </table>
 
           <!-- 페이지네이션 -->
           <div class="page">
