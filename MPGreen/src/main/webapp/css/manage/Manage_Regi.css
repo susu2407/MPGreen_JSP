@@ -77,7 +77,7 @@
     }
 
     /* 버튼 */
-    main .managemain form.register .button {
+    main .managemain form .button {
         width: 100px;
         margin-left: auto;
         display: block;
@@ -87,6 +87,21 @@
         border: none;
         cursor: pointer;
     }
+    	/* 인사 등록버튼*/
+   	main .managemain div.perList div.regi a{
+        width: 100px;
+        margin-left: auto;
+        display: block;
+        margin-top: 20px;
+        background-color: #2b5993;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 0;
+   	}
+
 
     /* input박스 스타일  */
     main .managemain input {

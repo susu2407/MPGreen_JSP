@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>그린대학교 학과 목록</title>
+    <title>그린대학교 강의목록</title>
     
 <%@ include file="/WEB-INF/views/manage/_header.jsp" %>
+
 
 <body>
     <main>
@@ -18,21 +20,21 @@
         <div class="managemain">
             <!-- 컨텐츠_최상단 -->
             <article class="top">
-                <h4>학과 목록</h4>
-                    <div class="breadcrumb">
-                        <span>대학 및 학과</span>
-                        <span class="end">학과 목록</span>
-                    </div>
+                <h4>강의 목록</h4>
+                <div class="breadcrumb">
+                    <span>학사관리</span>
+                    <span class="end">강의목록</span>
+                </div>
             </article>
 
-            <div class="NONE_con_1f">
+            <div class="perList">
                 <!-- 검색창 -->
                 <div class="search">
                     <div class="input-container">
                         <input type="text" class="search-condition" placeholder="검색조건">
                     </div>
                     <div class="input-container">
-                        <input type="text" class="search-input" placeholder="키워드 입력">
+                        <input type="text" class="search-input">
                     </div>
                     <div class="searchbtn">
                         <a href="#">검색</a>
@@ -42,26 +44,35 @@
                 <!-- 테이블 -->
                 <table>
                     <tr>
-                        <th>학과번호</th>
-                        <th>단과대학</th>
+                        <th>과목코드</th>
+                        <th>학년</th>
                         <th>학과</th>
-                        <th>학과장</th>
-                        <th>학과 연락처</th>
-                        <th>소속 교수 수</th>
-                        <th>소속 학생 수</th>
-                        <th>개설 강의 수</th>
+                        <th>  구분  </th>
+                        <th>과목명</th>
+                        <th>교수</th>
+                        <th>학점</th>
+                        <th>수업시간</th>
+                        <th>강의실</th>
+                        <th>최대 수강 인원</th>
                     </tr>
                 
+                    <c:forEach var="dto" items="${dtoList}">
                     <tr>
-                        <td>10</td>
-                        <td>인문사회대학</td>
-                        <td>국문학과</td>
-                        <td>김국어</td>
-                        <td>051-512-1010</td>
-                        <td>23</td>
-                        <td>322</td>
-                        <td>42</td>
+                        <td>${dto.course_code}</td>
+                        <td>${dto.department_id}</td>
+                        <td>${dto.grade}</td>
+                        <td>${dto.completion_type}</td>
+                        <td>${dto.course_name}</td>
+                        <td>${dto.professor}</td>
+                        <td>${dto.credit}</td>
+                        <td>${dto.class_time}</td>
+                        <td>${dto.classroom}</td>
+                        <td>${dto.max_capacity}</td>
                     </tr>
+                    </c:forEach>
+                                    
+                    
+                    
                 </table>
                     
                 <!-- 하단 페이지네이션(Pagination)-->
