@@ -11,17 +11,23 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class DBHelper {
+public class DBHelper2 {
 	
 	protected Connection conn = null;
 	protected PreparedStatement psmt = null;
 	protected Statement stmt = null;
 	protected ResultSet rs = null;
 	
-	public Connection getConnection() throws NamingException, SQLException {		
-		Context ctx = (Context) new InitialContext().lookup("java:comp/env");
-		DataSource ds = (DataSource) ctx.lookup("jdbc/greendae2");
-		return ds.getConnection();		
+	public Connection getConnection() {
+		Connection conn = null;
+		try {
+			Context ctx = (Context) new InitialContext().lookup("java:comp/env");
+			DataSource ds = (DataSource) ctx.lookup("jdbc/greendae2");
+			conn = ds.getConnection();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
 	}
 	
 	public void closeAll() throws SQLException {

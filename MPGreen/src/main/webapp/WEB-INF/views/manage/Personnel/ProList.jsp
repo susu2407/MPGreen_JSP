@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>그린대학교 학과 목록</title>
-    
+    <title>그린대학교 교수목록</title>
+
 <%@ include file="/WEB-INF/views/manage/_header.jsp" %>
+
 
 <body>
     <main>
@@ -18,14 +20,14 @@
         <div class="managemain">
             <!-- 컨텐츠_최상단 -->
             <article class="top">
-                <h4>학과 목록</h4>
-                    <div class="breadcrumb">
-                        <span>대학 및 학과</span>
-                        <span class="end">학과 목록</span>
-                    </div>
+                <h4>교수 목록</h4>
+                <div class="breadcrumb">
+                    <span>인사관리</span>
+                    <span class="end">교수목록</span>
+                </div>
             </article>
 
-            <div class="NONE_con_1f">
+            <div class="perList">
                 <!-- 검색창 -->
                 <div class="search">
                     <div class="input-container">
@@ -42,27 +44,52 @@
                 <!-- 테이블 -->
                 <table>
                     <tr>
-                        <th>학과번호</th>
-                        <th>단과대학</th>
+                        <th>교수번호</th>
+                        <th>이름</th>
+                        <th>주민번호</th>
+                        <th>휴대폰</th>
+                        <th>이메일</th>
                         <th>학과</th>
-                        <th>학과장</th>
-                        <th>학과 연락처</th>
-                        <th>소속 교수 수</th>
-                        <th>소속 학생 수</th>
-                        <th>개설 강의 수</th>
+                        <th>직위</th>
+                        <th>재직여부</th>
+                        <th>임용일</th>
                     </tr>
-                
+                    
+                    <c:forEach var="dto" items="${dtoList}">
                     <tr>
-                        <td>10</td>
-                        <td>인문사회대학</td>
-                        <td>국문학과</td>
-                        <td>김국어</td>
-                        <td>051-512-1010</td>
-                        <td>23</td>
-                        <td>322</td>
-                        <td>42</td>
+                        <td>${dto.p_id}</td>
+                        <td>${dto.name}</td>
+                        <td>${dto.id_num}</td>
+                        <td>${dto.phone}</td>
+                        <td>${dto.email}</td>
+                        <td>${dto.department}</td>
+                        <td>${dto.degree}</td>
+                        <%-- 재직여부 상태에 따라 동적으로 class를 부여 --%>
+				        <c:choose>
+				            <c:when test="${dto.p_status == '재직중' or dto.p_status == '재학'}">
+				                <td class="status-active">${dto.p_status}</td>
+				            </c:when>
+				            <c:when test="${dto.p_status == '휴직'}">
+				                <td class="status-leave">${dto.p_status}</td>
+				            </c:when>
+				            <c:when test="${dto.p_status == '퇴직'}">
+				                <td class="status-inactive">${dto.p_status}</td>
+				            </c:when>
+				            <c:otherwise>
+				                <td>${dto.p_status}</td>
+				            </c:otherwise>
+				        </c:choose>
+                        <td>${dto.hire_date}</td>
                     </tr>
+                    </c:forEach>
+                    
                 </table>
+                
+               
+                
+                <div class="regi">
+                        <a href="${pageContext.request.contextPath}/manage/Personnel/ProRegist.do">등록</a>
+                </div>
                     
                 <!-- 하단 페이지네이션(Pagination)-->
                 <article class="pagebtn">
@@ -73,6 +100,8 @@
                     <a href="#">3</a>
                     <a href="#" class="pagebtn_L"><img src="/MPGreen/images/btn-next-page.png" alt="Next"></a>
                     <a href="#"><img src="/MPGreen/images/btn-last-page.png" alt="Go to Last"></a>
+                
+                
                 </article>
             </div> 
         </div>

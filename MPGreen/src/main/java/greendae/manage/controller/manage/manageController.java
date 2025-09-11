@@ -1,4 +1,4 @@
-package greendae.manage.controller.dep;
+package greendae.manage.controller.manage;
 
 import java.io.IOException;
 
@@ -9,23 +9,21 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/manage/Department/depList.do")
-public class depListController extends HttpServlet{
+@WebServlet("/manage/manage.do")
+public class manageController extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/manage/Department/depList.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/manage/manage.jsp");
 		dispatcher.forward(req, resp);
+		
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 	}
-	
-	
-
 }

@@ -1,3 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <!-- CSS파일 연결-->
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Header.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Main.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Footer.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Regi.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_depMan.css">
+   
+    
+    <!-- 헤더 HTML-->
+    <div class="nav">
+        <div class="navItem">
+            <div><a href="${pageContext.request.contextPath}/manage/manage.do">HOME</a></div>
+            <div><a href="pass">사이트맵</a></div>
+            <div><a href="#">로그아웃</a></div>
+        </div>
+    </div>
+    <div class="header_bar">
+        <article>
+            <a href="${pageContext.request.contextPath}/manage/manage.do"><img src="/MPGreen/images/admin_logo.png" alt="학사관리 시스템"></a>
+        </article>
+    </div>
+</head>
+=======
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,4 +134,3 @@
 		      </div>
 		    </div>
   </header>
-

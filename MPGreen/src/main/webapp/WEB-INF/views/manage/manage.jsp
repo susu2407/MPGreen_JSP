@@ -1,13 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그린대학교 학사관리 시스템</title>
 
-<%@ include file="/manage/_header.jsp" %>
+<%@ include file="/WEB-INF/views/manage/_header.jsp" %>
 
 
 <body>
     <main>
         <!-- ■■■ 사이드바 시작 ■■■ -->
-        <%@ include file="/manage/_sidebar.jsp" %>
+        <%@ include file="/WEB-INF/views/manage/_sidebar.jsp" %>
         <!-- □□□ 사이드바 끝 □□□ -->
 
         <!-- ■■■ 메인컨텐츠 시작■■■-->
@@ -20,7 +25,7 @@
 
             <!-- ■■■ 컨텐츠_1층_대학 운영현황 ■■■ -->
             <div class="NONE_con_1f">
-                <h4><img src="/minP01/images/bullet-h4.png" alt="h4">대학 운영 현황</h4>
+                <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">대학 운영 현황</h4>
                 <table>
                     <thead>
                         <tr>
@@ -52,8 +57,8 @@
             <!-- ■■■ 컨텐츠_2층_교육 운영현황 ■■■ -->
             <div class="NONE_con_2f">
                 <div class="viewarea">
-                    <h4><img src="/minP01/images/bullet-h4.png" alt="h4">교육 운영 현황</h4>
-                    <img src="/minP01/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
+                    <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">교육 운영 현황</h4>
+                    <img src="/MPGreen/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
                 </div>
                 <table>
                     <thead>
@@ -139,8 +144,8 @@
             <article class="con_3_4f">
                 <div class="tb">
                     <div class="viewarea">
-                        <h4><img src="/minP01/images/bullet-h4.png" alt="h4">학년별 학생 현황</h4>
-                        <img src="/minP01/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
+                        <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">학년별 학생 현황</h4>
+                        <img src="/MPGreen/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
                     </div>
                     <table>
                         <thead>
@@ -189,8 +194,8 @@
                     <!-- 학과별 학생 현황 -->
                 <div class="tb">
                     <div class="viewarea">
-                        <h4><img src="/minP01/images/bullet-h4.png" alt="h4">학과별 학생 현황</h4>
-                        <img src="/minP01/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
+                        <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">학과별 학생 현황</h4>
+                        <img src="/MPGreen/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
                     </div>
                     <table>
                         <thead>
@@ -241,8 +246,8 @@
             <article class="con_3_4f">
                 <div class="tb">
                     <div class="viewarea">
-                        <h4><img src="/minP01/images/bullet-h4.png" alt="h4">학사안내 공지사항</h4>
-                        <img src="/minP01/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
+                        <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">학사안내 공지사항</h4>
+                        <img src="/MPGreen/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
                     </div>
                     <table>
                         <thead>
@@ -291,8 +296,8 @@
                     <!-- 입학상담 -->
                 <div class="tb">
                     <div class="viewarea">
-                        <h4><img src="/minP01/images/bullet-h4.png" alt="h4">입학상담</h4>
-                        <img src="/minP01/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
+                        <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">입학상담</h4>
+                        <img src="/MPGreen/images/bg-viewmore01.png" alt="viewmorebtn" class="vmore">
                     </div>
                     <table>
                         <thead>
@@ -345,4 +350,4 @@
 
 
     <!-- 푸터 -->
-    <%@ include file="/manage/_footer.jsp" %>
+    <%@ include file="/WEB-INF/views/manage/_footer.jsp" %>
