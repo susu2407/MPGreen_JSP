@@ -20,21 +20,23 @@ public enum CboardService {
     }
 
     // ==========================
-    // 글 단건 조회 (+조회수 증가)
+    // 글 단건 조회
     // ==========================
-    public CboardDTO findById(int boardId) {
-        // 조회수 증가 먼저
+    // (1) 조회수 증가 O → View 페이지에서 사용
+    public CboardDTO findByIdWithHit(int boardId) {
         dao.updateViewCount(boardId);
+        return dao.selectById(boardId);
+    }
+
+    // (2) 조회수 증가 X → Edit/Delete 페이지에서 사용
+    public CboardDTO findByIdWithoutHit(int boardId) {
         return dao.selectById(boardId);
     }
 
     // ==========================
     // 카테고리별 전체 조회
     // ==========================
-    public List<CboardDTO> findByCategory(String category) {
-        return dao.selectByCategory(category);
-    }
-    
+
     // ==========================
     // 페이지네이션 (카테고리 전용)
     // ==========================
@@ -75,16 +77,15 @@ public enum CboardService {
     // ==========================
     // 글 수정 / 삭제
     // ==========================
-
-    
-    
-    
-
-    public int remove(int boardId) {
-        return dao.delete(boardId);
+    public int modify(CboardDTO dto) {
+        return dao.update(dto);
     }
 
-    // ==========================
+    public int remove(int boardId, String writerId) {
+        return dao.delete(boardId, writerId);
+    }
+
+ // ==========================
     // 공통 페이지네이션 계산
     // ==========================
     private PagenationDTO buildPagenationDTO(String pg, int total) {
@@ -115,15 +116,10 @@ public enum CboardService {
         dto.setPageGroupStart(pageGroupStart);
         dto.setPageGroupEnd(pageGroupEnd);
 
+        // 🔥 prev/next 계산 추가
+        dto.setPrev(pageGroupStart > 1);
+        dto.setNext(pageGroupEnd < lastPageNum);
+
         return dto;
     }
-    
-    
-    
-    
-    public int modify(CboardDTO dto) {
-        return dao.update(dto);
-    }
-
-    
 }

@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="./_header.jsp" %>
 
-<body class="page-community data-write">
-
+<body class="page-community data-delete">
   <main>
     <div class="top-bar">
       <div class="top-bar-content">
@@ -10,9 +9,9 @@
         <img src="../images/bg-path-arrow.png" alt=">">
         <a href="#" class="sidebar-text">커뮤니티</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/list.do?category=data" class="sidebar-text">자료실</a>
+        <a href="${pageContext.request.contextPath}/community/data.do" class="sidebar-text">자료실</a>
         <img src="../images/bg-path-arrow.png" alt=">">
-        <a href="${pageContext.request.contextPath}/community/write.do?category=data" class="sidebar-text">글쓰기</a>
+        <a href="${pageContext.request.contextPath}/community/data_delete.do?boardId=${board.boardId}" class="sidebar-text">글삭제</a>
       </div>
     </div>
 
@@ -35,38 +34,23 @@
 
       <div class="board">
         <div class="boardUpper">
-          <h3 class="buText">자료실</h3>
+          <h3 class="buText">자료실 글삭제</h3>
         </div>
 
         <div class="notice-wrap">
-          <form class="write-form" action="${pageContext.request.contextPath}/community/write.do?category=data" method="post">
-            <input type="hidden" name="category" value="data">
-
-            <div class="form-row">
-              <label for="title">제목</label>
-              <input type="text" id="title" name="title" required>
-            </div>
-
-            <div class="form-row">
-              <label for="content">내용</label>
-              <textarea id="content" name="content" rows="10" required></textarea>
-            </div>
-
-            <!-- 첨부파일 처리 아직 없으면 주석 -->
-            <!-- 
-            <div class="form-row">
-              <label for="file">첨부파일</label>
-              <input type="file" id="file" name="file" multiple>
-            </div>
-            -->
-
-            <div class="form-actions">
-              <button type="submit" class="btn-submit">등록</button>
-              <a href="${pageContext.request.contextPath}/community/list.do?category=data" class="btn-cancel">취소</a>
-            </div>
-          </form>
+        <form action="${pageContext.request.contextPath}/community/delete.do" method="post">
+			  <input type="hidden" name="category" value="data" />
+			  <input type="hidden" name="boardId" value="${board.boardId}" />
+			  <p>정말로 이 글을 삭제하시겠습니까?</p>
+			  <div class="form-actions">
+			    <button type="submit" class="btn-danger">네</button>
+			    <a href="${pageContext.request.contextPath}/community/view.do?category=free&boardId=${board.boardId}" class="btn-cancel">아니요</a>
+			  </div>
+			</form>
         </div>
       </div>
     </section>
   </main>
 </body>
+
+<%@ include file="./_footer.jsp" %>

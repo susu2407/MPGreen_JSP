@@ -22,12 +22,12 @@
         </div>
         <div class="sidebarMenu">
           <ul class="list">
-            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do" style="color:#fff">공지사항</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/free.do">자유게시판</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
+            <li class="item active"><a class="itemText" href="${pageContext.request.contextPath}/community/notice.do" style="color:#fff" >공지사항</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
+            <li class="item "><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=qna" >질문과 답변</a></li>
+            <li class="item"><a class="itemText" href="${pageContext.request.contextPath}/community/list.do?category=data">자료실</a></li>
           </ul>
         </div>
       </div>
@@ -39,6 +39,8 @@
 
         <div class="notice-wrap">
           <form class="write-form" action="${pageContext.request.contextPath}/community/notice_write.do" method="post">
+            
+            <input type="hidden" name="category" value="notice">
             
             <div class="form-row">
               <label for="title">제목</label>

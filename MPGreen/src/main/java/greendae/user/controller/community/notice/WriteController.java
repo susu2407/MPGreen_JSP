@@ -33,21 +33,18 @@ public class WriteController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
 
-        // URL에서 카테고리 추출
-        String path = req.getServletPath();
-        String category = path.replace("/community/", "").replace("_write.do", "");
-
-        // 파라미터 받기
+        String category = req.getParameter("category");
         String title = req.getParameter("title");
         String content = req.getParameter("content");
+        String newsType = req.getParameter("newsType");
 
-        // TODO: 로그인 세션에서 userId 가져오기
-        String writerType = "info";  // 기본값 (관리자)
-        String writerId = "admin";   // 로그인 연동 시 session에서 꺼내오기
+     // ★ 로그인 세션이 없으니 임시 고정값 세팅
+        String writerType = "info";      // ENUM(info, student, professor)
+        String writerId = "admin";       // PK에 맞는 값
+        String writerName = "관리자";     // 보여줄 이름
 
         CboardDTO dto = new CboardDTO();
         dto.setCategory(category);
@@ -56,10 +53,15 @@ public class WriteController extends HttpServlet {
         dto.setWriterType(writerType);
         dto.setWriterId(writerId);
 
-        int boardId = service.register(dto);
+        // ✅ DB에는 writer_name이 없으므로 insert에서는 사용하지 않음
+        // 하지만 DTO에는 세팅해두면 JSP에서 ${board.writerName} 호출 시 값이 뜸
+        dto.setWriterName(writerName);
 
-        // 작성 완료 후 해당 카테고리 뷰 페이지로 이동
-        resp.sendRedirect(req.getContextPath() + "/community/" + category + "_view.do?boardId=" + boardId);
+        dto.setNewsType(newsType);
+        service.register(dto);
 
+        // ✅ notice 전용 목록 페이지로 리다이렉트
+        resp.sendRedirect(req.getContextPath() + "/community/notice.do");
     }
+
 }

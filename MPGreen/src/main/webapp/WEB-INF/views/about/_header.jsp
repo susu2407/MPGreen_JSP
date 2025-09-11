@@ -6,9 +6,8 @@
         <title>GreenUniversity</title>
         <link rel="stylesheet" href="/MPGreen/css/common/header.css">
         <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/common/layout.css">
-        <link rel="stylesheet" href="/MPGreen/css/about/About.css">
-
+        <link rel="stylesheet" href="/MPGreen/css/community/Community.css">
+		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
     </head>
 
     <body>
@@ -72,7 +71,7 @@
                         <a class="dropbtn" href="#">학사안내</a>
                         <ul class="dropdown-content">
                             <li><a href="${pageContext.request.contextPath}/academic/notice.do">공지사항</a></li>
-                            <li><a href="${pageContext.request.contextPath}/academic/curriculum.do">학사일정</a></li>
+                            <li><a href="${pageContext.request.contextPath}/academic/schedule.do">학사일정</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/enroll.do">수강신청</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/grade.do">성적</a></li>
                             <li><a href="${pageContext.request.contextPath}/academic/graduation.do">수료 및 졸업</a></li>
@@ -95,12 +94,13 @@
                     <li class="dropdown">
                         <a class="dropbtn" href="#">커뮤니티</a>
                         <ul class="dropdown-content">
-                            <li><a href="${pageContext.request.contextPath}/community/notice.do">공지사항</a></li>
-                            <li><a href="${pageContext.request.contextPath}/community/news.do">뉴스 및 칼럼</a></li>
-                            <li><a href="${pageContext.request.contextPath}/community/jobs.do">취업정보</a></li>
-                            <li><a href="${pageContext.request.contextPath}/community/free.do">자유게시판</a></li>
-                            <li><a href="${pageContext.request.contextPath}/community/qna.do">질문과 답변</a></li>
-                            <li><a href="${pageContext.request.contextPath}/community/data.do">자료실</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=notice">공지사항</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=news">뉴스 및 칼럼</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=jobs">취업정보</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=free">자유게시판</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=qna">질문과 답변</a></li>
+							<li><a href="${pageContext.request.contextPath}/community/list.do?category=data">자료실</a></li>
+
 		              </ul>
 		            </li>
 		          </ul>
@@ -108,3 +108,4 @@
 		      </div>
 		    </div>
   </header>
+
