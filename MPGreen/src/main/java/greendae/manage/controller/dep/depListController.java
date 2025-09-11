@@ -17,7 +17,7 @@ public class depListController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/manage/Department/depList.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/manage/Department/depList.jsp");
 		dispatcher.forward(req, resp);
 	}
 	

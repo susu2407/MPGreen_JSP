@@ -1,3 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <!-- CSS파일 연결-->
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Header.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Main.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Footer.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Regi.css">
+    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_depMan.css">
+   
+    
+    <!-- 헤더 HTML-->
+    <div class="nav">
+        <div class="navItem">
+            <div><a href="${pageContext.request.contextPath}/manage/manage.do">HOME</a></div>
+            <div><a href="pass">사이트맵</a></div>
+            <div><a href="#">로그아웃</a></div>
+        </div>
+    </div>
+    <div class="header_bar">
+        <article>
+            <a href="${pageContext.request.contextPath}/manage/manage.do"><img src="/MPGreen/images/admin_logo.png" alt="학사관리 시스템"></a>
+        </article>
+    </div>
+</head>
+=======
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +35,25 @@
         <link rel="stylesheet" href="/MPGreen/css/community/Community.css">
 		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
     </head>
+<<<<<<< Updated upstream
+=======
 
     <body>
         <header>
             <div id="header-top">
                 <div class="container">
                     <ul class="util">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">사이트맵</a></li>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">학생지원</a></li>
+                        <li><a href="/MPGreen/index.jsp">HOME</a></li>
+                        <li><a href="/MPGreen/index.jsp">사이트맵</a></li>
+                        <li><a href="/MPGreen/member/login.do">로그인</a></li>
+                        <li><a href="/MPGreen/student/enroll.do">학생지원</a></li>
 		                    </ul>
 		                </div>
 		            </div>
 		            <div class="header-main">
 		
 		                <div class="container">
-		                    <a href="/" class="logo">
+		                    <a href="/MPGreen/index.jsp" class="logo">
 		                        <img src="/MPGreen/images/header_logo.png" alt="그린대학교">
 		                    </a>
 		                    <nav class="main-nav">
@@ -109,3 +137,4 @@
 		    </div>
   </header>
 
+>>>>>>> Stashed changes

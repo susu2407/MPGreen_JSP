@@ -6,7 +6,7 @@
         <title>GreenUniversity</title>
         <link rel="stylesheet" href="/MPGreen/css/common/header.css">
         <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/community/Community.css">
+        <link rel="stylesheet" href="/MPGreen/css/admission/Admission.css">
 		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
     </head>
 
@@ -15,17 +15,17 @@
             <div id="header-top">
                 <div class="container">
                     <ul class="util">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">사이트맵</a></li>
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">학생지원</a></li>
+                        <li><a href="/MPGreen/index.jsp">HOME</a></li>
+                        <li><a href="/MPGreen/index.jsp">사이트맵</a></li>
+                        <li><a href="/MPGreen/member/login.do">로그인</a></li>
+                        <li><a href="/MPGreen/student/enroll.do">학생지원</a></li>
 		                    </ul>
 		                </div>
 		            </div>
 		            <div class="header-main">
 		
 		                <div class="container">
-		                    <a href="/" class="logo">
+		                    <a href="/MPGreen/index.jsp" class="logo">
 		                        <img src="/MPGreen/images/header_logo.png" alt="그린대학교">
 		                    </a>
 		                    <nav class="main-nav">

@@ -9,7 +9,7 @@
                 <div class="hero-content">
                     <p>IT 기술과 창의적 사고를 통해 미래를 설계하는 인재 양성</p>
                     <h2>그린대학교 컴퓨터과학과</h2>
-                    <a href="#" class="hero-button">학과바로가기</a>
+                    <a href="/MPGreen/academics/humanities.do" class="hero-button">학과바로가기</a>
                 </div>
                 <!-- 슬라이드 위치 아이콘 -->
                 <div class="slide-indicators">
@@ -25,7 +25,7 @@
                     <div class="notice-board">
                         <div class="notice-header white-header">
                             <h3>학사안내</h3>
-                            <a href="#" class="more-btn"></a>
+                            <a href="${pageContext.request.contextPath}/academic/notice.do" class="more-btn"></a>
                         </div>
                         <ul>
                             <li><a href="#">2025학년도 2학기 수강신청 안내</a><span>2025.09.04</span></li>
@@ -37,7 +37,7 @@
                     <div class="notice-board blue-header">
                         <div class="notice-header">
                             <h3>공지사항</h3>
-                            <a href="#" class="more-btn"></a>
+                            <a href="${pageContext.request.contextPath}/community/notice.do" class="more-btn"></a>
                         </div>
                         <ul>
                             <li><a href="#">[모집] 2025 그린대학교 코딩경진대회 참가자 모집</a><span>2025.09.04</span></li>
@@ -60,22 +60,22 @@
             
                     <!-- 갤러리 아이템 목록 -->
                     <div class="photo_gallery">
-                        <a href="#">
+                        <a href="/MPGreen/life/gallery.do">
                             <div class="caption">
                                 <p>글로벌 명문대학 그린대학교</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="/MPGreen/life/gallery.do">
                             <div class="caption">
                                 <p>글로벌 명문대학 그린대학교</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="/MPGreen/life/gallery.do">
                             <div class="caption">
                                 <p>글로벌 명문대학 그린대학교</p>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="/MPGreen/life/gallery.do">
                             <div class="caption">
                                 <p>글로벌 명문대학 그린대학교</p>
                             </div>
@@ -93,7 +93,7 @@
                             인터넷 강의, 교재를 제공하고 스터디 그룹의 활동을 도와주고 있습니다.
                         </p>
                     </div>
-                    <a href="#" class="banner-button">자세히 보기</a>
+                    <a href="/MPGreen/life/study.do" class="banner-button">자세히 보기</a>
                 </div>
             </section>
 
@@ -103,7 +103,7 @@
                     <div class="notice-board news-board">
                         <div class="notice-header">
                             <h3>뉴스/이벤트</h3>
-                            <a href="#" class="more-btn"></a>
+                            <a href="/MPGreen/community/list.do?category=news" class="more-btn"></a>
                         </div>
                         <ul>
                             <li><a href="#">[뉴스] 그린대학교, AI 연구소 개소</a><span>2025.09.04</span></li>
@@ -134,7 +134,7 @@
                                     <div class="icon-placeholder"><span>사이트맵 아이콘</span></div>
                                     <p>사이트맵</p>
                                 </a>
-                                <a href="#" class="link-item support">
+                                <a href="/student/enroll.do" class="link-item support">
                                     <div class="icon-placeholder"><span>학생지원 아이콘</span></div>
                                     <p>학생지원</p>
                                 </a>

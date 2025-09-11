@@ -19,20 +19,20 @@
             </div>
             <div class="sidebarMenu">
                 <ul class="list">
-                   <li class="item">
-                        <a href="/MPGreen/student/enroll.do" class="itemText">수강신청</a>
+                    <li class="item"> <!--사이드바 리스트 요소-->
+                        <a href="${pageContext.request.contextPath}/student/enroll.do" class="itemText">수강신청</a>
                     </li>
                     <li class="item">
-                        <a href="/MPGreen/student/enroll_list.do" class="itemText">수강신청내역</a>
+                        <a href="${pageContext.request.contextPath}/student/enroll_list.do" class="itemText">수강신청내역</a>
                     </li>
                     <li class="item">
-                        <a href="/MPGreen/student/curriculum.do" class="itemText">나의교육과정</a>
+                        <a href="${pageContext.request.contextPath}/student/curriculum.do" class="itemText">교과과정</a>
                     </li>
                     <li class="item">
-                        <a href="/MPGreen/student/grade-view.do" class="itemText">성적조회</a>
+                        <a href="${pageContext.request.contextPath}/student/grade_view.do" class="itemText">성적조회</a>
                     </li>
                     <li class="item">
-                        <a href="/MPGreen/student/record.do" class="itemText">학적</a>
+                        <a href="${pageContext.request.contextPath}/student/record.do" class="itemText">학적</a>
                     </li>
                 </ul>
             </div>

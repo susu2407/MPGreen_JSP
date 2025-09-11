@@ -38,14 +38,14 @@
                     </li>
                 </ul>
             </div>
-        </div>>
+        </div>
 
         <div class="board"> <!--본문 영역-->
             
             <div class="boardUpper">
                 <h3 class="buText">자연과학대학</h3>
             </div>
-                <div class="boardLower"> <!--본문(내용 영역)-->
+                <div class="boardLower"> 
                         <div class="collegeContainer">
                             <img src="/MPGreen/images/college-introduce-2.jpg" class="collegePhoto">
                             <div class="collegeArticle">

@@ -1,15 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="/manage/_header.jsp" %>
-
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그린대학교 대학 및 학과 등록</title>
+    
+<%@ include file="/WEB-INF/views/manage/_header.jsp" %>
 
 <body>
     <main>
         <!-- ■■■ 사이드바 시작 ■■■ -->
-        <%@ include file="/manage/_sidebar.jsp" %>
+        <%@ include file="/WEB-INF/views/manage/_sidebar.jsp" %>
         <!-- □□□ 사이드바 끝 □□□ -->
 
         <!-- ■■■ 메인컨텐츠 시작■■■-->
@@ -26,7 +28,7 @@
             <!-- 기본정보 입력 -->
             <form class="register" >
                 <div>
-                    <h4><img src="/images/bullet-h4.png" alt="h4">대학 정보 입력</h4>
+                    <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">대학 정보 입력</h4>
                 </div>
 
 <!-- 대학 정보 입력 -->
@@ -59,7 +61,7 @@
             <!-- 기본정보 입력 -->
             <form class="register" >
                 <div>
-                    <h4><img src="/images/bullet-h4.png" alt="h4">학과 정보 입력</h4>
+                    <h4><img src="/MPGreen/images/bullet-h4.png" alt="h4">학과 정보 입력</h4>
                 </div>
 
                 <table class="basic">
@@ -116,4 +118,4 @@
 
 
     <!-- 푸터 -->
-    <%@ include file="/manage/_footer.jsp" %>
+    <%@ include file="/WEB-INF/views/manage/_footer.jsp" %>

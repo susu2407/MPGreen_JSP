@@ -43,7 +43,7 @@
 
     /* sidebar 윗부분 레이아웃 */
     .sidebarHeader{
-        width: 210px;
+        width: auto;
         height: 54px;
         padding-top: 62px;
 
@@ -51,7 +51,7 @@
     
     /* sidevar 제목 서식 */
     .sbTitle{
-        width: 128.4px;
+        width: 200px;
         height: 36px;
         margin-top: -1px;
         font: 700 32px bold;

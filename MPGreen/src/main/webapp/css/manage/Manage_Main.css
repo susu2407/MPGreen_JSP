@@ -70,7 +70,7 @@ aside a {
 
 /* 컨텐츠 최상단 */
     main .managemain {
-        width: 1130px;
+        width: 100%;
         height: auto;
         flex-grow: 1;
         padding: 20px;
@@ -165,31 +165,40 @@ main .managemain div h4 {
 
 /* 인사관리_학생&교수 목록*/    
     /* 학생*교수 리스트 표 */
-    main .managemain .stdList table tr td.ing {
-        color: green;
-    }
-    main .managemain .stdList table tr td.run {
-        color: red;
-    }
-    main .managemain .stdList table tr td.rest {
-        color: rgb(255, 187, 0);
-    }
-    main .managemain .stdList table tr td.end {
-        color: blue;
-    }
+    /* 기본 스타일은 유지하고 각 상태에 대한 색상만 지정합니다 */
+	main .managemain .perList table tr td {
+	    /* 기존에 있던 td 스타일은 여기에 유지 */
+	}
+	
+	/* 재직중, 재학 (초록색) */
+	main .managemain .perList table tr td.status-active {
+	    color: green;
+	    font-weight: bold;
+	}
+	
+	/* 휴직 (노란색/주황색) */
+	main .managemain .perList table tr td.status-leave {
+	    color: orange;
+	}
+	
+	/* 퇴직 (빨간색) */
+	main .managemain .perList table tr td.status-inactive {
+	    color: red;
+	}
 
 
 /* 게시판류 공통 */
     /* 검색 */
     .search {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-bottom: 20px;
-    }
+    	width: 100%;
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+	    padding-bottom: 20px;
+	}
 
     .input-container {
-        padding: 0 2px;
+        padding: 0 1px;
     }
 
     .search-condition {

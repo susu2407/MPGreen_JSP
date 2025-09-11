@@ -1,14 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="/manage/_header.jsp" %>
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그린대학교 학과 목록</title>
+    
+<%@ include file="/WEB-INF/views/manage/_header.jsp" %>
 
 <body>
     <main>
         <!-- ■■■ 사이드바 시작 ■■■ -->
-        <%@ include file="/manage/_sidebar.jsp" %>
+        <%@ include file="/WEB-INF/views/manage/_sidebar.jsp" %>
         <!-- □□□ 사이드바 끝 □□□ -->
 
         <!-- ■■■ 메인컨텐츠 시작■■■-->
@@ -63,13 +66,13 @@
                     
                 <!-- 하단 페이지네이션(Pagination)-->
                 <article class="pagebtn">
-                    <a href="#"><img src="/minP01/images/btn-first-page.png" alt="Go to First"></a>
-                    <a href="#" class="pagebtn_R"><img src="/minP01/images/btn-prev-page.png" alt="Previous"></a>
+                    <a href="#"><img src="/MPGreen/images/btn-first-page.png" alt="Go to First"></a>
+                    <a href="#" class="pagebtn_R"><img src="/MPGreen/images/btn-prev-page.png" alt="Previous"></a>
                     <a href="#">1</a>
                     <a href="#">2</a>
                     <a href="#">3</a>
-                    <a href="#" class="pagebtn_L"><img src="/minP01/images/btn-next-page.png" alt="Next"></a>
-                    <a href="#"><img src="/minP01/images/btn-last-page.png" alt="Go to Last"></a>
+                    <a href="#" class="pagebtn_L"><img src="/MPGreen/images/btn-next-page.png" alt="Next"></a>
+                    <a href="#"><img src="/MPGreen/images/btn-last-page.png" alt="Go to Last"></a>
                 </article>
             </div> 
         </div>
@@ -79,4 +82,4 @@
 
 
     <!-- 푸터 -->
-    <%@ include file="/manage/_footer.jsp" %>
+    <%@ include file="/WEB-INF/views/manage/_footer.jsp" %>

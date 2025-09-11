@@ -17,7 +17,7 @@
     <section id="container"> 
         <div class="sidebar"> <!--사이드바-->
             <div class="sidebarHeader"> <!--사이드바 윗부분(제목 영역)-->
-                <h2 class="sbTitle">입학안내</h2> <!--사이드바 제목-->
+                <h2 class="sbTitle">학사안내</h2> <!--사이드바 제목-->
             </div>
             <div class="sidebarMenu"> <!--사이드바 하위 메뉴-->
                 <ul class="list"> <!--사이드바 리스트-->
