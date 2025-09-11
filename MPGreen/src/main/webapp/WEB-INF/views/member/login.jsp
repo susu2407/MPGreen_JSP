@@ -19,7 +19,7 @@
                 <ul class="util">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">로그인</a></li>
+                    <li><a href="/member/login.do">로그인</a></li>
                     <li><a href="#">학생지원</a></li>
                 </ul>
             </div>
@@ -85,7 +85,7 @@
                 <img src="/MPGreen/images/ico-home.png" alt="홈">
                 <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">대학소개</a>
-                <img src="/MPGreen/images/bg-path-arrow.png" alt="next">
+               	<img src="/MPGreen/images/bg-path-arrow.png" alt="next">
                 <a href="#" class="sidebar-text">총장 인사말</a>
             </div>
         </div>
@@ -95,16 +95,16 @@
                 <h1 class="login-title">LOGIN</h1>
                 <p class="login-comment">로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
 
-                <form>
+                <form action="/MPGreen/member/login.do" method="post">
                     <div class="form-header">
                         <div class="role-selector">
-                            <input type="radio" id="student" name="role" checked>
+                            <input type="radio" id="student" name="role" value="student" checked>
                             <label for="student">학부생</label>
 
-                            <input type="radio" id="staff" name="role">
+                            <input type="radio" id="staff" name="role" value="professor">
                             <label for="staff">교직원</label>
 
-                            <input type="radio" id="general" name="role">
+                            <input type="radio" id="general" name="role" value="user">
                             <label for="general">일반인</label>
                         </div>
                         <div class="find-link">
@@ -112,8 +112,8 @@
                         </div>
                     </div>
 
-                    <input type="text" class="input-field" placeholder="아이디">
-                    <input type="password" class="input-field" placeholder="비밀번호">
+                    <input type="text" class="input-field" name="id" placeholder="아이디">
+                    <input type="password" class="input-field" name="pw" placeholder="비밀번호">
 
                     <button type="submit" class="login-button">로그인</button>
                 </form>
@@ -138,4 +138,4 @@
             </div>
         </div>
     </main>
-    <%@ include file="/WEB-INF/views/common/_footer.jsp" %>
+<%@ include file="/WEB-INF/views/common/_footer.jsp" %>
