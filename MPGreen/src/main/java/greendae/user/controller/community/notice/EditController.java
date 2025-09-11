@@ -1,7 +1,6 @@
 package greendae.user.controller.community.notice;
 
 import java.io.IOException;
-
 import greendae.user.dto.community.CboardDTO;
 import greendae.user.service.community.CboardService;
 import jakarta.servlet.RequestDispatcher;
@@ -10,7 +9,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 
 @WebServlet("/community/notice_edit.do")
 public class EditController extends HttpServlet {
@@ -21,7 +19,7 @@ public class EditController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        
+
         String boardIdParam = req.getParameter("boardId");
         if (boardIdParam == null) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "boardId is required");
@@ -29,7 +27,8 @@ public class EditController extends HttpServlet {
         }
 
         int boardId = Integer.parseInt(boardIdParam);
-        CboardDTO board = service.findById(boardId);
+        // 조회수 증가 없이 조회
+        CboardDTO board = service.findByIdWithoutHit(boardId);
 
         if (board == null) {
             resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Board not found");

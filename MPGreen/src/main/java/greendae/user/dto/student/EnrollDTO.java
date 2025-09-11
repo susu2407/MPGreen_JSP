@@ -9,6 +9,15 @@ public class EnrollDTO {
     private int credit;
     private String name;
     private int max_capacity;
+    
+    private int current_capacity; // 현재 신청인원 추가
+    
+	public int getCurrent_capacity() {
+		return current_capacity;
+	}
+	public void setCurrent_capacity(int current_capacity) {
+		this.current_capacity = current_capacity;
+	}
 	public String getDepartment_name() {
 		return department_name;
 	}
@@ -61,8 +70,9 @@ public class EnrollDTO {
 	public String toString() {
 		return "EnrollDTO [department_name=" + department_name + ", completion_Type=" + completion_Type + ", grade="
 				+ grade + ", course_code=" + course_code + ", course_name=" + course_name + ", credit=" + credit
-				+ ", name=" + name + ", max_capacity=" + max_capacity + "]";
+				+ ", name=" + name + ", max_capacity=" + max_capacity + ", current_capacity=" + current_capacity + "]";
 	}
+	
 	
     
 	

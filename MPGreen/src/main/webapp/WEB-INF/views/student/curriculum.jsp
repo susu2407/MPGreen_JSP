@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ include file="/WEB-INF/views/student/_header.jsp"%>
 
   <main>
@@ -58,7 +59,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                <c:forEach var="dto" items="${dtoList}">
+                                	<tr>
                                         <td rowspan="6">1</td>
                                         <td>G01940</td>
                                         <td>공통</td>
@@ -206,6 +208,7 @@
                                         <td>HTML/CSS/Javascript</td>
                                         <td>3</td>
                                     </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>

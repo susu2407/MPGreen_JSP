@@ -315,6 +315,7 @@
     
 
 
+
 /*========= enroll(수강신청) ==========*/
 .course-search {
   width: 930px;
@@ -327,40 +328,39 @@
   border: none;
 }
 
-
 /* 링크 요소 */
-.search-link {
-  width: 150.5px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between; /* 텍스트 왼쪽, 이미지 오른쪽 */
-  align-items: center;
-  padding: 0 10px;
-  background: #fff;
-  border: 1px solid #dedede;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 350;
-  font-size: 15px;
-  text-decoration: none;
-  color: #000;
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
-.search-link img {
-  height: auto;
+.search-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 150px;
 }
 
-/* input */
-.search-input {
-  width: 237px;
+.search-select {
+  width: 100%;
   height: 40px;
-  padding: 0 10px;
-  background: #fff;
+  padding: 0 30px 0 10px; /* 오른쪽 패딩 넉넉히 */
   border: 1px solid #dedede;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 350;
   font-size: 15px;
-  color: #757575;
+  font-family: 'Noto Sans KR', sans-serif;
+  appearance: none; /* 브라우저 기본 화살표 제거 */
 }
 
+.search-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 8px;
+  height: 5px;
+  background: url('/test/images/btn-sel-open01.png') no-repeat center;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
 /* button */
 .search-btn {
   width: 70px;
@@ -377,9 +377,22 @@
   background: #357fce;
 }
 
+
+/* input */
+.search-input {
+  width: 237px;
+  height: 40px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: #757575;
+}
+
 .course-table {
   width: 930px;
-  height: 393px;
   border-collapse: collapse;
   border-top: 2px solid #000;
   margin-top: 20px;
@@ -460,27 +473,55 @@
 
 /*========= enroll-list(수강신청내역) ==========*/
 .course-history-search {
-  width: 930px;
-  height: 40px;
   display: flex;
   align-items: center;
-  gap: 8px;          /* 요소 사이 간격 */
-  border: none;
-  padding: 0;         /* 기본 padding 제거 */
-  margin: 35px 0 0 0; /* 위쪽 마진만 유지, 좌우 0 */
+  gap: 8px;
   font-family: 'Noto Sans KR', sans-serif;
+  margin: 35px 0 0 0;
 }
-/* 선택 박스 */
+
+/* 선택 박스 공통 */
 .select-box {
+  position: relative;  /* ::after 또는 .arrow 위치 기준 */
   width: 100px;
   height: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  background: #fff;
   border: 1px solid #dedede;
-  text-decoration: none;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+/* 작은 박스 (학기) */
+.select-box.small {
+  width: 50px;
+}
+
+/* select 자체 스타일 제거 */
+.select-box select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  padding: 0 30px 0 10px; /* 오른쪽 패딩 넉넉히 */
+}
+
+/* 화살표 추가 */
+.select-box .arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 8px;   /* 이미지 원본 크기 */
+  height: 5px;  /* 이미지 원본 크기 */
+  background: url('/test/images/btn-sel-open01.png') no-repeat center;
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 .select-box.small {
   width: 50px; /* 학기 선택용 */
@@ -489,6 +530,23 @@
   font-weight: 350;
   font-size: 15px;
   color: #000;
+}
+.select-list {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.select-list li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.select-list li:hover {
+    background-color: #f0f0f0;
 }
 
 
@@ -502,8 +560,7 @@
 
 /* 오른쪽 수강신청내역 합계 */
 .result-count {
-  margin-left: auto; /* 오른쪽 끝 정렬 */
-  margin-right: 30px;
+  margin-left: auto; /* flex 컨테이너 내 오른쪽 정렬 */
   font-weight: 700;
   font-size: 18.7px;
   color: #000;
