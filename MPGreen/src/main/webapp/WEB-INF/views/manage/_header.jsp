@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    <!-- CSS파일 연결-->
-    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Header.css">
-    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Main.css">
-    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Footer.css">
-    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_Regi.css">
-    <link rel="stylesheet" href="/MPGreen/css/manage/Manage_depMan.css">
-   
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GreenUniversity</title>
+    <link rel="stylesheet" href="/MPGreen/css/common/header.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
+    <link rel="stylesheet" href="/MPGreen/css/community/Community.css">
+    <link rel="stylesheet" href="/MPGreen/css/common/layout.css">
+
     <!-- 헤더 HTML-->
     <div class="nav">
         <div class="navItem">
@@ -23,20 +24,9 @@
         </article>
     </div>
 </head>
-=======
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>GreenUniversity</title>
-        <link rel="stylesheet" href="/MPGreen/css/common/header.css">
-        <link rel="stylesheet" href="/MPGreen/css/common/footer.css">
-        <link rel="stylesheet" href="/MPGreen/css/community/Community.css">
-		<link rel="stylesheet" href="/MPGreen/css/common/layout.css">
-    </head>
-<<<<<<< Updated upstream
-=======
+<body>
+    <!-- 여기서부터 body 내용 작성 -->
+
 
     <body>
         <header>
@@ -137,4 +127,4 @@
 		    </div>
   </header>
 
->>>>>>> Stashed changes
+
