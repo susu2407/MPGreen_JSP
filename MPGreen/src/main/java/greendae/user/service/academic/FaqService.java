@@ -26,3 +26,4 @@ public enum FaqService {
 		dao.delete(cate, num);
 	}
 }
+
