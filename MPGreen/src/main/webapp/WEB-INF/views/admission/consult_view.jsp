@@ -28,16 +28,16 @@
                         <a href="${pageContext.request.contextPath}/admission/notice.do" class="itemText">공지사항</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/early.do" class="itemText">수시모집</a>
+                        <a href="${pageContext.request.contextPath}/admission/early.do" class="itemText">수시모집</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/regular.do" class="itemText">정시모집</a>
+                        <a href="${pageContext.request.contextPath}/admission/regular.do" class="itemText">정시모집</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/transfer.do" class="itemText">편입학</a>
+                        <a href="${pageContext.request.contextPath}/admission/transfer.do" class="itemText">편입학</a>
                     </li>
                     <li class="item">
-                        <a href="${pageContext.request.contextPath}/adimssion/consult.do" class="itemText">입학상담</a>
+                        <a href="${pageContext.request.contextPath}/admission/consult.do" class="itemText">입학상담</a>
                     </li>
                 </ul>
         </div>
