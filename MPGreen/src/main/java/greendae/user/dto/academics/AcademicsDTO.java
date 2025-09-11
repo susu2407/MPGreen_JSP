@@ -5,7 +5,6 @@ public class AcademicsDTO {
 	private String department_name;
 	private String dean;
 	private String contact_phone;
-//	private String remark;
 	
 	public String getDepartment_name() {
 		return department_name;
@@ -31,18 +30,10 @@ public class AcademicsDTO {
 		this.contact_phone = contact_phone;
 	}
 	
-	/*public String getRemark() {
-		return remark;
-	}
-	
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}*/
 	
 	@Override
 	public String toString() {
-		return "AcademicsDTO [department_name=" + department_name + ", dean=" + dean + ", contact_phone=" + contact_phone + /*", remark=" + remark
-				+*/ "]";
+		return "AcademicsDTO [department_name=" + department_name + ", dean=" + dean + ", contact_phone=" + contact_phone + "]";
 	}
 	
 	
